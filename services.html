@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Achivoo</title>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<!-- Note: We link style.css normally here, but Vite will handle the import in main.js if we keep using the module script. 
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Services | Achivoo</title>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<!-- Note: We link style.css normally here, but Vite will handle the import in main.js if we keep using the module script. 
+       However, linking it directly is often safer for styles to appear before JS loads if not using the module injection solely.
+       But in Vite, 'import "./style.css"' in main.js is the standard way. 
+       I'll stick to the module script pattern to be consistent with Vite. -->
+
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Achivoo.</a>
+            <nav>
+                <ul>
+                    <li><a href="/services.html" style="color: var(--color-accent);">Services</a></li>
+                    <li><a href="/case-studies.html">Case Studies</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/team.html">Team</a></li>
+                    <li><a href="/blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <a href="/contact.html" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Get
+                    a Growth Audit</a>
+                <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-menu"
+        style="position: fixed; top: 80px; left: 0; width: 100%; background: #fff; padding: 2rem; display: none; border-bottom: 1px solid #eee; z-index: 999;">
+        <ul style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/case-studies.html">Case Studies</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/team.html">Team</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="section"
+            style="background: var(--color-bg-alt); padding-top: calc(var(--header-height) + 4rem);">
+            <div class="container text-center">
+                <h1>Our Expertise. Your Growth.</h1>
+                <p style="color: var(--color-text-light); max-width: 700px; margin: 0 auto 2rem;">We solve complex
+                    growth challenges with proven strategies. Problem → Strategy → Outcome.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container text-center">
+                <h2>Core Services</h2>
+            </div>
+            <div class="container" style="display: flex; flex-direction: column; gap: 4rem; margin-top: 3rem;">
+
+                <!-- Service 1 -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                    <div>
+                        <h3 style="font-size: 2rem; margin-bottom: 1rem;">Search Engine Optimization (SEO)</h3>
+                        <p style="margin-bottom: 1.5rem;"><strong>Problem:</strong> Your website is invisible to your
+                            ideal customers.</p>
+                        <div
+                            style="background: #f8fafc; padding: 1.5rem; border-left: 4px solid var(--color-accent); margin-bottom: 1.5rem;">
+                            <p style="font-size: 0.95rem;"><strong>Strategy:</strong> Comprehensive technical audit,
+                                on-page optimization, and authority-building content campaigns.</p>
+                        </div>
+                        <p style="color: var(--color-growth); font-weight: 600;">Outcome: Higher rankings, more
+                            qualified traffic, and reduced CAC.</p>
+                        <ul
+                            style="margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.9rem; color: #64748b;">
+                            <li>✓ Technical SEO</li>
+                            <li>✓ On-Page Optimization</li>
+                            <li>✓ Content Marketing</li>
+                            <li>✓ Authority Building</li>
+                        </ul>
+                    </div>
+                    <div
+                        style="background: #e2e8f0; height: 300px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #94a3b8;">
+                        <!-- Placeholder for SEO Image -->
+                        <span>SEO Illustration</span>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                    <div style="order: 2;">
+                        <h3 style="font-size: 2rem; margin-bottom: 1rem;">Performance Marketing</h3>
+                        <p style="margin-bottom: 1.5rem;"><strong>Problem:</strong> Ad spend is high, but conversions
+                            are low.</p>
+                        <div
+                            style="background: #f8fafc; padding: 1.5rem; border-left: 4px solid var(--color-accent); margin-bottom: 1.5rem;">
+                            <p style="font-size: 0.95rem;"><strong>Strategy:</strong> Precision targeting on Google &
+                                Meta Ads with high-converting creative and landing pages.</p>
+                        </div>
+                        <p style="color: var(--color-growth); font-weight: 600;">Outcome: Scalable lead generation and
+                            predictable ROI.</p>
+                        <ul
+                            style="margin-top: 1.5rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem; font-size: 0.9rem; color: #64748b;">
+                            <li>✓ Google Ads (PPC)</li>
+                            <li>✓ Meta Ads(FB/Insta)</li>
+                            <li>✓ Retargeting</li>
+                            <li>✓ Display Ads</li>
+                        </ul>
+                    </div>
+                    <div
+                        style="order: 1; background: #e2e8f0; height: 300px; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #94a3b8;">
+                        <span>Ads Illustration</span>
+                    </div>
+                </div>
+
+                <!-- Other Services Grid -->
+                <div class="card-grid" style="margin-top: 2rem;">
+                    <div class="card">
+                        <h4>Social Media Marketing</h4>
+                        <p class="text-xs text-gray-500 mb-2">Build community and brand loyalty.</p>
+                        <ul style="font-size: 0.9rem; color: #64748b; list-style: disc; padding-left: 1rem;">
+                            <li>Content Strategy</li>
+                            <li>Community Management</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Conversion Rate Optimization</h4>
+                        <p class="text-xs text-gray-500 mb-2">Turn more visitors into customers.</p>
+                        <ul style="font-size: 0.9rem; color: #64748b; list-style: disc; padding-left: 1rem;">
+                            <li>A/B Testing</li>
+                            <li>UX Analysis</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>AI-Driven SEO</h4>
+                        <p class="text-xs text-gray-500 mb-2">Scale content without sacrificing quality.</p>
+                        <ul style="font-size: 0.9rem; color: #64748b; list-style: disc; padding-left: 1rem;">
+                            <li>AI Content Systems</li>
+                            <li>Automated Insights</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="section text-center">
+            <div class="container">
+                <h2>Ready to Scale?</h2>
+                <a href="/contact.html" class="btn btn-primary" style="margin-top: 1.5rem;">Start Your Project</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col" style="flex: 2; min-width: 300px;">
+                    <a href="/" class="logo" style="color: #fff; display: block; margin-bottom: 1rem;">Achivoo.</a>
+                    <p style="color: #94a3b8; max-width: 400px;">A premium digital growth partner for ambitious brands.
+                        We focus on what matters: Revenue, ROI, and Results.</p>
+                </div>
+                <div class="footer-col" style="flex: 1;">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/team.html">Team</a></li>
+                        <li><a href="/careers.html">Careers</a></li>
+                        <li><a href="/case-studies.html">Case Studies</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" style="flex: 1;">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/services.html">SEO</a></li>
+                        <li><a href="/services.html">Performance Marketing</a></li>
+                        <li><a href="/services.html">Content Strategy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" style="flex: 1;">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/faq.html">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Achivoo Growth Agency. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

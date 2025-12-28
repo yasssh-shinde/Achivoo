@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog | Achivoo</title>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Achivoo.</a>
+            <nav>
+                <ul>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/case-studies.html">Case Studies</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/team.html">Team</a></li>
+                    <li><a href="/blog.html" style="color: var(--color-accent);">Blog</a></li>
+                </ul>
+            </nav>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <a href="/contact.html" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Get
+                    a Growth Audit</a>
+                <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-menu"
+        style="position: fixed; top: 80px; left: 0; width: 100%; background: #fff; padding: 2rem; display: none; border-bottom: 1px solid #eee; z-index: 999;">
+        <ul style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/case-studies.html">Case Studies</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/team.html">Team</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <!-- Hero -->
+        <section class="section"
+            style="padding-top: calc(var(--header-height) + 4rem); background: var(--color-bg-alt);">
+            <div class="container text-center">
+                <h1>Insights for Growth</h1>
+                <p style="max-width: 700px; margin: 0 auto; color: var(--color-text-light);">Expert perspectives on SEO,
+                    Performance Marketing, and scalable revenue strategies.</p>
+            </div>
+        </section>
+
+        <!-- Blog Grid -->
+        <section class="section">
+            <div class="container">
+                <div class="card-grid">
+                    <!-- Post 1 -->
+                    <div class="card" style="padding: 0; overflow: hidden;">
+                        <div style="height: 200px; background: #e2e8f0; width: 100%;"></div> <!-- Placeholder Img -->
+                        <div style="padding: 1.5rem;">
+                            <span
+                                style="color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">SEO
+                                Strategy</span>
+                            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">The "Hub & Spoke" SEO Model Explained
+                            </h3>
+                            <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1.5rem;">How to structure your
+                                content to dominate high-competition keywords.</p>
+                            <a href="#" style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Post 2 -->
+                    <div class="card" style="padding: 0; overflow: hidden;">
+                        <div style="height: 200px; background: #e2e8f0; width: 100%;"></div>
+                        <div style="padding: 1.5rem;">
+                            <span
+                                style="color: var(--color-growth); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Paid
+                                Ads</span>
+                            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">Google Ads vs. Meta Ads: Where to Spend?
+                            </h3>
+                            <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1.5rem;">A data-driven breakdown
+                                of ROI across differeny industry verticals.</p>
+                            <a href="#" style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Post 3 -->
+                    <div class="card" style="padding: 0; overflow: hidden;">
+                        <div style="height: 200px; background: #e2e8f0; width: 100%;"></div>
+                        <div style="padding: 1.5rem;">
+                            <span
+                                style="color: var(--color-primary); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">AI
+                                in Marketing</span>
+                            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">Scale Content 10x with AI (Without
+                                Losing Quality)</h3>
+                            <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1.5rem;">The exact workflow we
+                                use to produce high-ranking content at scale.</p>
+                            <a href="#" style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
+                        </div>
+                    </div>
+
+                    <!-- Post 4 -->
+                    <div class="card" style="padding: 0; overflow: hidden;">
+                        <div style="height: 200px; background: #e2e8f0; width: 100%;"></div>
+                        <div style="padding: 1.5rem;">
+                            <span
+                                style="color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">CRO</span>
+                            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">5 Landing Page Tweaks to Dougle
+                                Conversions</h3>
+                            <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1.5rem;">Simple changes you can
+                                make today to improve your CVR.</p>
+                            <a href="#" style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section text-center" style="background: #111827; color: #fff;">
+            <div class="container">
+                <h2>Subscribe for Growth Insights</h2>
+                <p style="color: #94a3b8; max-width: 500px; margin: 0.5rem auto 2rem;">Join 5,000+ founders receiving
+                    our weekly growth tactics.</p>
+                <form onsubmit="event.preventDefault(); alert('Subscribed!');"
+                    style="max-width: 400px; margin: 0 auto; display: flex; gap: 0.5rem;">
+                    <input type="email" placeholder="Enter your email" required
+                        style="flex: 1; padding: 0.75rem; border-radius: 6px; border: none;">
+                    <button type="submit" class="btn btn-accent" style="padding: 0.75rem 1.5rem;">Subscribe</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-col" style="flex: 2; min-width: 300px;">
+                    <a href="/" class="logo" style="color: #fff; display: block; margin-bottom: 1rem;">Achivoo.</a>
+                    <p style="color: #94a3b8; max-width: 400px;">A premium digital growth partner for ambitious brands.
+                        We focus on what matters: Revenue, ROI, and Results.</p>
+                </div>
+                <div class="footer-col" style="flex: 1;">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="/about.html">About Us</a></li>
+                        <li><a href="/team.html">Team</a></li>
+                        <li><a href="/careers.html">Careers</a></li>
+                        <li><a href="/case-studies.html">Case Studies</a></li>
+                        <li><a href="/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" style="flex: 1;">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="/services.html">SEO</a></li>
+                        <li><a href="/services.html">Performance Marketing</a></li>
+                        <li><a href="/services.html">Content Strategy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" style="flex: 1;">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="/blog.html">Blog</a></li>
+                        <li><a href="/faq.html">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2025 Achivoo Growth Agency. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>

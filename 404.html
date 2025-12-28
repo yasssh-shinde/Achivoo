@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 - Page Not Found | Achivoo</title>
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+    <header>
+        <div class="container">
+            <a href="/" class="logo">Achivoo.</a>
+            <nav>
+                <ul>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/case-studies.html">Case Studies</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/team.html">Team</a></li>
+                    <li><a href="/blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            <div style="display: flex; gap: 1rem; align-items: center;">
+                <a href="/contact.html" class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Get
+                    a Growth Audit</a>
+                <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-menu"
+        style="position: fixed; top: 80px; left: 0; width: 100%; background: #fff; padding: 2rem; display: none; border-bottom: 1px solid #eee; z-index: 999;">
+        <ul style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/case-studies.html">Case Studies</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/team.html">Team</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <main
+        style="flex: 1; display: flex; align-items: center; justify-content: center; text-align: center; padding-top: 80px;">
+        <section class="section">
+            <div class="container">
+                <h1 style="font-size: 6rem; color: var(--color-growth); margin-bottom: 0;">404</h1>
+                <h2 style="margin-bottom: 2rem;">Growth Opportunity Not Found</h2>
+                <p style="color: #64748b; margin-bottom: 2rem;">The page you are looking for has vanished (kind of like
+                    your organic traffic before you hired us).</p>
+                <a href="/" class="btn btn-primary">Back to Homepage</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom" style="border: none;">
+                &copy; 2025 Achivoo Growth Agency. All rights reserved.
+            </div>
+        </div>
+    </footer>
+    <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
