@@ -405,21 +405,133 @@ footer .container {
 }
 
 /* Responsive */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}
+
 @media (max-width: 768px) {
+  :root {
+    --header-height: 70px;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+
   nav ul {
     display: none;
-    /* Mobile menu implementation usually requires JS toggle */
   }
 
   .mobile-toggle {
     display: block;
   }
 
+  .hero {
+    padding-top: calc(var(--header-height) + 2rem);
+    padding-bottom: 4rem;
+    text-align: center;
+  }
+
+  .hero p {
+    margin: 0 auto 2rem;
+  }
+
+  .hero .flex-buttons {
+    justify-content: center;
+  }
+
+  /* Split layout to stack */
+  .split-layout {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+
+  .footer-top {
+    gap: 2rem;
+  }
+
+  .footer-col {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+
+  .footer-col h4 {
+    margin-bottom: 1rem;
+  }
+
+  .footer-col ul {
+    align-items: center;
+  }
+
+  /* Job Card */
   .job-card {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 2.5rem !important;
+  }
+
+  h2 {
+    font-size: 2rem !important;
+  }
+
+  h3 {
+    font-size: 1.5rem !important;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .card-grid,
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .header-actions {
+    gap: 0.5rem;
+  }
+
+  .btn {
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+  }
+
+  .header-cta {
+    display: none;
+    /* Hide CTA button on very small screens if needed, or adjust */
+  }
+
+  .list-grid,
+  .mini-stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* Utilities */
+.list-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.mini-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
 
 /* Animations */
