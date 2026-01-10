@@ -1,0 +1,721 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Growth Tools | VSS</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <style>
+        /* Tool-specific Premium Styles */
+        body {
+            background-color: #FAFAFA;
+        }
+
+        .tools-hero {
+            text-align: center;
+            padding: 8rem 2rem 4rem;
+            background: linear-gradient(180deg, #fff 0%, #f1f5f9 100%);
+        }
+
+        .tools-hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            letter-spacing: -0.05em;
+        }
+
+        .tools-hero p {
+            font-size: 1.25rem;
+            color: var(--color-text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            padding: 2rem 0 6rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .tool-card {
+            background: #fff;
+            border-radius: 16px;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            padding: 2rem;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            border-color: var(--color-accent);
+        }
+
+        .tool-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .tool-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--color-bg-alt);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--color-accent);
+        }
+
+        .tool-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-heading);
+            margin: 0;
+        }
+
+        .tool-desc {
+            color: var(--color-text-light);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+
+        .input-group {
+            margin-bottom: 1rem;
+        }
+
+        .input-label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: var(--color-heading);
+        }
+
+        .tool-input,
+        .tool-textarea {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid #CBD5E1;
+            border-radius: 8px;
+            font-family: var(--font-main);
+            font-size: 0.95rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            background: #fff;
+        }
+
+        .tool-input:focus,
+        .tool-textarea:focus {
+            outline: none;
+            border-color: var(--color-accent);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+
+        .tool-textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .btn-generate {
+            width: 100%;
+            margin-top: auto;
+            background: var(--color-heading);
+            color: #fff;
+            padding: 0.875rem;
+            border-radius: 8px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-generate:hover {
+            background: var(--color-accent);
+            transform: translateY(-1px);
+        }
+
+        .result-box {
+            margin-top: 1.5rem;
+            background: #F8FAFC;
+            border: 1px dashed #CBD5E1;
+            border-radius: 8px;
+            padding: 1rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9rem;
+            color: #334155;
+            white-space: pre-wrap;
+            word-break: break-all;
+            display: none;
+            position: relative;
+        }
+
+        .result-box.active {
+            display: block;
+            animation: fadeIn 0.3s ease-out;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 0.5rem;
+            right: 0.5rem;
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            cursor: pointer;
+            color: var(--color-text-light);
+        }
+
+        .copy-btn:hover {
+            color: var(--color-accent);
+            border-color: var(--color-accent);
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* SERP Specific */
+        .serp-preview-card {
+            background: #fff;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+            font-family: arial, sans-serif;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <a href="/" class="logo">VSS.</a>
+            <nav>
+                <ul>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/case-studies.html">Case Studies</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/team.html">Team</a></li>
+                    <li><a href="/tools.html" style="color: var(--color-accent);">Tools</a></li>
+                    <li><a href="/blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions" style="display: flex; gap: 1rem; align-items: center;">
+                <a href="/contact.html" class="btn btn-primary header-cta"
+                    style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Get a Growth Audit</a>
+                <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <div id="mobile-menu"
+        style="position: fixed; top: 80px; left: 0; width: 100%; background: #fff; padding: 2rem; display: none; border-bottom: 1px solid #eee; z-index: 999;">
+        <ul style="display: flex; flex-direction: column; gap: 1.5rem;">
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/case-studies.html">Case Studies</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/team.html">Team</a></li>
+            <li><a href="/tools.html">Tools</a></li>
+            <li><a href="/blog.html">Blog</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <main>
+        <section class="tools-hero">
+            <div class="container">
+                <h1>Growth Tools</h1>
+                <p>A curated suite of powerful utilities to supercharge your SEO, content, and development workflow.</p>
+            </div>
+        </section>
+
+        <section style="background: #FAFAFA;">
+            <div class="container">
+                <div class="tools-grid">
+
+                    <!-- 1. Meta Tag Generator -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">🏷️</div>
+                            <h3 class="tool-title">Meta Tag Generator</h3>
+                        </div>
+                        <p class="tool-desc">Create SEO-perfect title and description tags for your web pages.</p>
+                        <div class="input-group">
+                            <label class="input-label">Page Title</label>
+                            <input type="text" id="meta-title" class="tool-input"
+                                placeholder="e.g. Best SEO Agency in New York">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label">Description</label>
+                            <textarea id="meta-desc" class="tool-textarea" placeholder="Summarize your page content..."
+                                style="min-height: 80px;"></textarea>
+                        </div>
+                        <button onclick="generateMetaTags()" class="btn-generate">Generate Tags</button>
+                        <div id="meta-result" class="result-box"></div>
+                    </div>
+
+                    <!-- 2. Word Counter -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">📝</div>
+                            <h3 class="tool-title">Word Counter</h3>
+                        </div>
+                        <p class="tool-desc">Analyze your content length to hit optimal SEO word counts.</p>
+                        <div class="input-group">
+                            <textarea id="word-input" class="tool-textarea" style="height: 150px;"
+                                placeholder="Paste your content here..." oninput="countWords()"></textarea>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; text-align: center;">
+                            <div style="background: var(--color-bg-alt); padding: 1rem; border-radius: 8px;">
+                                <div id="word-count"
+                                    style="font-size: 1.5rem; font-weight: 700; color: var(--color-heading);">0</div>
+                                <div style="font-size: 0.8rem; color: var(--color-text-light);">Words</div>
+                            </div>
+                            <div style="background: var(--color-bg-alt); padding: 1rem; border-radius: 8px;">
+                                <div id="char-count"
+                                    style="font-size: 1.5rem; font-weight: 700; color: var(--color-accent);">0</div>
+                                <div style="font-size: 0.8rem; color: var(--color-text-light);">Characters</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 3. SERP Preview -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">🔍</div>
+                            <h3 class="tool-title">SERP Preview</h3>
+                        </div>
+                        <p class="tool-desc">Visualize how your page will appear in Google search results.</p>
+                        <div class="input-group">
+                            <input type="text" id="serp-title-input" class="tool-input" placeholder="Title"
+                                value="VSS Growth Agency" oninput="updateSerpPreview()">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="serp-url-input" class="tool-input" placeholder="URL" value="vss.com"
+                                oninput="updateSerpPreview()">
+                        </div>
+                        <div class="input-group">
+                            <textarea id="serp-desc-input" class="tool-textarea" placeholder="Description"
+                                style="min-height: 80px;"
+                                oninput="updateSerpPreview()">We help brands scale revenue.</textarea>
+                        </div>
+                        <div class="serp-preview-card">
+                            <div style="color: #202124; font-size: 14px; margin-bottom: 2px;" id="serp-url">
+                                https://vss.com</div>
+                            <div style="color: #1a0dab; font-size: 20px; text-decoration: none; cursor: pointer; margin-bottom: 2px;"
+                                id="serp-title">VSS Growth Agency</div>
+                            <div style="color: #4d5156; font-size: 14px; line-height: 1.58;" id="serp-desc">We help
+                                brands scale revenue.</div>
+                        </div>
+                    </div>
+
+                    <!-- 4. Keyword Density -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">📊</div>
+                            <h3 class="tool-title">Keyword Density</h3>
+                        </div>
+                        <p class="tool-desc">Check how frequently your target keyword appears in the text.</p>
+                        <div class="input-group">
+                            <input type="text" id="kd-keyword" class="tool-input" placeholder="Target Keyword">
+                        </div>
+                        <div class="input-group">
+                            <textarea id="kd-text" class="tool-textarea" placeholder="Content to analyze..."
+                                style="height: 100px;"></textarea>
+                        </div>
+                        <button onclick="checkDensity()" class="btn-generate">Analyze Text</button>
+                        <div id="kd-result" class="result-box"></div>
+                    </div>
+
+                    <!-- 5. Robots.txt -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">🤖</div>
+                            <h3 class="tool-title">Robots.txt Generator</h3>
+                        </div>
+                        <p class="tool-desc">Generate a standard robots.txt file to control crawler access.</p>
+                        <div class="input-group">
+                            <label class="input-label">User Agent</label>
+                            <input type="text" id="robot-ua" class="tool-input" value="*" placeholder="*">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label">Disallow Path</label>
+                            <input type="text" id="robot-disallow" class="tool-input" placeholder="/admin/">
+                        </div>
+                        <button onclick="generateRobots()" class="btn-generate">Generate File</button>
+                        <div id="robot-result" class="result-box"></div>
+                    </div>
+
+                    <!-- 6. Slug Generator -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">🐌</div>
+                            <h3 class="tool-title">Slug Generator</h3>
+                        </div>
+                        <p class="tool-desc">Convert titles into clean, SEO-friendly URL slugs.</p>
+                        <div class="input-group">
+                            <input type="text" id="slug-input" class="tool-input"
+                                placeholder="e.g. 10 Ways to Grow Traffic" oninput="generateSlug()">
+                        </div>
+                        <div id="slug-result" class="result-box"
+                            style="display: block; min-height: 3rem; cursor: pointer;" onclick="copyBox('slug-result')">
+                            <span class="copy-btn">Copy</span>
+                            <span id="slug-text"></span>
+                        </div>
+                    </div>
+
+                    <!-- 7. Open Graph -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">📱</div>
+                            <h3 class="tool-title">Open Graph Generator</h3>
+                        </div>
+                        <p class="tool-desc">Create meta tags for beautiful social media link previews.</p>
+                        <div class="input-group">
+                            <input type="text" id="og-title" class="tool-input" placeholder="Title">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="og-desc" class="tool-input" placeholder="Description">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="og-image" class="tool-input" placeholder="Image URL">
+                        </div>
+                        <button onclick="generateOG()" class="btn-generate">Generate Tags</button>
+                        <div id="og-result" class="result-box"></div>
+                    </div>
+
+                    <!-- 8. FAQ Schema -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">🏗️</div>
+                            <h3 class="tool-title">FAQ Schema</h3>
+                        </div>
+                        <p class="tool-desc">Generate JSON-LD schema markup for your FAQ pages.</p>
+                        <div class="input-group">
+                            <input type="text" id="faq-q" class="tool-input" placeholder="Question">
+                        </div>
+                        <div class="input-group">
+                            <textarea id="faq-a" class="tool-textarea" style="min-height: 80px;"
+                                placeholder="Answer"></textarea>
+                        </div>
+                        <button onclick="generateSchema()" class="btn-generate">Generate schema</button>
+                        <div id="schema-result" class="result-box"></div>
+                    </div>
+
+                    <!-- 9. UTM Builder -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">🔗</div>
+                            <h3 class="tool-title">UTM Builder</h3>
+                        </div>
+                        <p class="tool-desc">Build trackable URLs for your marketing campaigns.</p>
+                        <div class="input-group">
+                            <input type="text" id="utm-url" class="tool-input" placeholder="Website URL">
+                        </div>
+                        <div class="input-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <input type="text" id="utm-source" class="tool-input" placeholder="Source (google)">
+                            <input type="text" id="utm-medium" class="tool-input" placeholder="Medium (cpc)">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="utm-campaign" class="tool-input" placeholder="Campaign Name">
+                        </div>
+                        <button onclick="generateUTM()" class="btn-generate">Build URL</button>
+                        <div id="utm-result" class="result-box"></div>
+                    </div>
+
+                    <!-- 10. Lorem Ipsum -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">📄</div>
+                            <h3 class="tool-title">Lorem Ipsum</h3>
+                        </div>
+                        <p class="tool-desc">Generate placeholder text for your designs.</p>
+                        <div
+                            style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; margin-bottom: 1rem;">
+                            <button onclick="generateLorem(1)"
+                                style="padding: 0.5rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; cursor: pointer;">1
+                                Para</button>
+                            <button onclick="generateLorem(3)"
+                                style="padding: 0.5rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; cursor: pointer;">3
+                                Paras</button>
+                            <button onclick="generateLorem(5)"
+                                style="padding: 0.5rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; cursor: pointer;">5
+                                Paras</button>
+                        </div>
+                        <div id="lorem-result" class="result-box" style="max-height: 150px; overflow-y: auto;"></div>
+                    </div>
+
+                    <!-- 11. Sitemap Generator -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">🗺️</div>
+                            <h3 class="tool-title">Sitemap to XML</h3>
+                        </div>
+                        <p class="tool-desc">Convert a list of URLs into a formatted XML sitemap.</p>
+                        <div class="input-group">
+                            <textarea id="sitemap-urls" class="tool-textarea" style="height: 120px;"
+                                placeholder="Paste URLs (one per line)..."></textarea>
+                        </div>
+                        <button onclick="generateSitemap()" class="btn-generate">Generate XML</button>
+                        <div id="sitemap-result" class="result-box"></div>
+                    </div>
+
+                    <!-- 12. HTML Encode -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">💻</div>
+                            <h3 class="tool-title">HTML Encode</h3>
+                        </div>
+                        <p class="tool-desc">Safe-encode special characters for HTML display.</p>
+                        <div class="input-group">
+                            <textarea id="html-input" class="tool-textarea" style="height: 100px;"
+                                placeholder="Input text..."></textarea>
+                        </div>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;">
+                            <button onclick="htmlEncode()" class="btn-generate"
+                                style="background: var(--color-heading);">Encode</button>
+                            <button onclick="htmlDecode()" class="btn-generate"
+                                style="background: #94a3b8;">Decode</button>
+                        </div>
+                        <div id="html-result" class="result-box"></div>
+                    </div>
+
+                    <!-- 13. Title Case -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">🔠</div>
+                            <h3 class="tool-title">Title Case</h3>
+                        </div>
+                        <p class="tool-desc">Capitalize your headlines correctly according to style guides.</p>
+                        <div class="input-group">
+                            <input type="text" id="title-case-input" class="tool-input"
+                                placeholder="Type headline here..." oninput="convertTitleCase()">
+                        </div>
+                        <div id="title-case-result" class="result-box" style="display: block; min-height: 3rem;"></div>
+                    </div>
+
+                    <!-- 14. LLMs.txt Generator -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">🤖</div>
+                            <h3 class="tool-title">LLMs.txt Gen</h3>
+                        </div>
+                        <p class="tool-desc">Generate an AI-friendly index file for your documentation.</p>
+                        <div class="input-group">
+                            <input type="text" id="llm-title" class="tool-input"
+                                placeholder="Site Title (e.g. API Docs)">
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="llm-url" class="tool-input" placeholder="Main URL">
+                        </div>
+                        <button onclick="generateLLMsTxt()" class="btn-generate">Generate File</button>
+                        <div id="llm-result" class="result-box"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                &copy; 2025 VSS Growth Agency. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+    <script>
+        // Helper: Copy to Clipboard
+        function copyBox(id) {
+            const el = document.getElementById(id); // Or specific child
+            // Simple logic for the slug example
+            const text = el.innerText.replace('Copy', '').trim();
+            navigator.clipboard.writeText(text);
+            const btn = el.querySelector('.copy-btn');
+            if (btn) {
+                const original = btn.innerText;
+                btn.innerText = 'Copied!';
+                setTimeout(() => btn.innerText = original, 2000);
+            }
+        }
+
+        // 1. Meta Tags
+        function generateMetaTags() {
+            const title = document.getElementById('meta-title').value;
+            const desc = document.getElementById('meta-desc').value;
+            const html = `<title>${title}</title>\n<meta name="description" content="${desc}">`;
+            showResult('meta-result', html);
+        }
+
+        // 2. Word Count
+        function countWords() {
+            const text = document.getElementById('word-input').value;
+            const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+            document.getElementById('word-count').innerText = words;
+            document.getElementById('char-count').innerText = text.length;
+        }
+
+        // 3. XP Preview
+        function updateSerpPreview() {
+            const t = document.getElementById('serp-title-input').value;
+            const u = document.getElementById('serp-url-input').value;
+            const d = document.getElementById('serp-desc-input').value;
+            document.getElementById('serp-title').innerText = t || 'Title';
+            document.getElementById('serp-url').innerText = 'https://' + u.replace(/^https?:\/\//, '');
+            document.getElementById('serp-desc').innerText = d || 'Description...';
+        }
+
+        // 4. Keyword Density
+        function checkDensity() {
+            const k = document.getElementById('kd-keyword').value.toLowerCase();
+            const t = document.getElementById('kd-text').value.toLowerCase();
+            if (!k || !t) return;
+            const matches = (t.match(new RegExp(k.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g')) || []).length;
+            const total = t.trim().split(/\s+/).length;
+            const density = ((matches / total) * 100).toFixed(2);
+            showResult('kd-result', `Keyword "${k}" appears ${matches} times.\nDensity: ${density}%`);
+        }
+
+        // 5. Robots
+        function generateRobots() {
+            const ua = document.getElementById('robot-ua').value || '*';
+            const dis = document.getElementById('robot-disallow').value || '/';
+            showResult('robot-result', `User-agent: ${ua}\nDisallow: ${dis}`);
+        }
+
+        // 6. Slug
+        function generateSlug() {
+            const val = document.getElementById('slug-input').value;
+            const slug = val.toLowerCase().trim().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-');
+            document.getElementById('slug-text').innerText = slug;
+        }
+
+        // 7. OG
+        function generateOG() {
+            const t = document.getElementById('og-title').value;
+            const d = document.getElementById('og-desc').value;
+            const i = document.getElementById('og-image').value;
+            showResult('og-result', `<meta property="og:title" content="${t}" />\n<meta property="og:description" content="${d}" />\n<meta property="og:image" content="${i}" />`);
+        }
+
+        // 8. Schema
+        function generateSchema() {
+            const q = document.getElementById('faq-q').value;
+            const a = document.getElementById('faq-a').value;
+            const json = {
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": [{ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } }]
+            };
+            showResult('schema-result', JSON.stringify(json, null, 2));
+        }
+
+        // 9. UTM
+        function generateUTM() {
+            const u = document.getElementById('utm-url').value;
+            const s = document.getElementById('utm-source').value;
+            const m = document.getElementById('utm-medium').value;
+            const c = document.getElementById('utm-campaign').value;
+            try {
+                const url = new URL(u.startsWith('http') ? u : 'https://' + u);
+                url.searchParams.set('utm_source', s);
+                if (m) url.searchParams.set('utm_medium', m);
+                if (c) url.searchParams.set('utm_campaign', c);
+                showResult('utm-result', url.toString());
+            } catch (e) { alert('Invalid URL'); }
+        }
+
+        // 10. Lorem
+        function generateLorem(n) {
+            const p = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+            let h = "";
+            for (let i = 0; i < n; i++) h += `<p style="margin-bottom:0.5rem">${p}</p>`;
+            const b = document.getElementById('lorem-result');
+            b.innerHTML = h;
+            b.classList.add('active');
+        }
+
+        // 11. Sitemap
+        function generateSitemap() {
+            const urls = document.getElementById('sitemap-urls').value.split('\n');
+            let x = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+            urls.forEach(u => { if (u.trim()) x += `  <url><loc>${u.trim()}</loc></url>\n`; });
+            x += '</urlset>';
+            showResult('sitemap-result', x);
+        }
+
+        // 12. HTML Encode
+        function htmlEncode() {
+            const t = document.getElementById('html-input').value;
+            const d = document.createElement('div');
+            d.innerText = t;
+            showResult('html-result', d.innerHTML);
+        }
+        function htmlDecode() {
+            const t = document.getElementById('html-input').value;
+            const d = new DOMParser().parseFromString(t, "text/html");
+            showResult('html-result', d.documentElement.textContent);
+        }
+
+        // 13. Title Case
+        function convertTitleCase() {
+            const t = document.getElementById('title-case-input').value;
+            const small = /^(a|an|and|as|at|but|by|en|for|if|in|nor|of|on|or|per|the|to|vs?\.?|via)$/i;
+            const r = t.replace(/[A-Za-z0-9\u00C0-\u00FF]+[^\s-]*/g, function (match, index, title) {
+                if (index > 0 && index + match.length !== title.length &&
+                    match.search(small) > -1 && title.charAt(index - 2) !== ":" &&
+                    (title.charAt(index + match.length) !== '-' || title.charAt(index - 1) === '-') &&
+                    title.charAt(index - 1).search(/[^\s-]/) < 0) {
+                    return match.toLowerCase();
+                }
+                if (match.substr(1).search(/[A-Z]|\../) > -1) {
+                    return match;
+                }
+                return match.charAt(0).toUpperCase() + match.substr(1);
+            });
+            const box = document.getElementById('title-case-result');
+            box.innerText = r;
+            box.classList.add('active');
+        }
+
+        // 14. LLMs.txt
+        function generateLLMsTxt() {
+            const t = document.getElementById('llm-title').value;
+            const u = document.getElementById('llm-url').value;
+            if (!t || !u) return alert('Fill all fields');
+            const c = `# ${t}\n\n## Links\n- [Home](${u})\n- [Docs](${u}/docs)`;
+            showResult('llm-result', c);
+        }
+
+        function showResult(id, content) {
+            const el = document.getElementById(id);
+            el.innerText = content;
+            el.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>
