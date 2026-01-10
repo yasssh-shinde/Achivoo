@@ -14,6 +14,7 @@ export default defineConfig({
                 team: resolve(__dirname, 'team.html'),
                 careers: resolve(__dirname, 'careers.html'),
                 faq: resolve(__dirname, 'faq.html'),
+                tools: resolve(__dirname, 'tools.html'),
                 notFound: resolve(__dirname, '404.html'),
             },
         },
