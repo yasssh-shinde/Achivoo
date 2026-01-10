@@ -533,6 +533,42 @@
                         <div id="llm-result" class="result-box"></div>
                     </div>
 
+                    <!-- 15. Load Time Estimator -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">⚡</div>
+                            <h3 class="tool-title">Speed Estimator</h3>
+                        </div>
+                        <p class="tool-desc">Calculate estimated page load times based on file size.</p>
+                        <div class="input-group">
+                            <input type="number" id="speed-size" class="tool-input" placeholder="Page Size (KB)"
+                                oninput="calcSpeed()">
+                        </div>
+                        <div class="input-group"
+                            style="text-align: center; font-size: 0.9rem; color: var(--color-text-light); margin-bottom: 0.5rem;">
+                            OR
+                        </div>
+                        <div class="input-group">
+                            <textarea id="speed-code" class="tool-textarea" style="height: 80px;"
+                                placeholder="Paste code to calculate size..." oninput="calcSpeedFromCode()"></textarea>
+                        </div>
+                        <div id="speed-result" class="result-box"></div>
+                    </div>
+
+                    <!-- 16. Website Recon -->
+                    <div class="tool-card">
+                        <div class="tool-header">
+                            <div class="tool-icon">🕵️</div>
+                            <h3 class="tool-title">Website Recon</h3>
+                        </div>
+                        <p class="tool-desc">Quickly gather technical intelligence on a website.</p>
+                        <div class="input-group">
+                            <input type="text" id="recon-url" class="tool-input" placeholder="e.g. vss.com">
+                        </div>
+                        <button onclick="reconSite()" class="btn-generate">Analyze Site</button>
+                        <div id="recon-result" class="result-box"></div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -541,7 +577,7 @@
     <footer>
         <div class="container">
             <div class="footer-bottom">
-                &copy; 2025 VSS Growth Agency. All rights reserved.
+                &copy; 2026 VSS Growth Agency. All rights reserved.
             </div>
         </div>
     </footer>
@@ -708,6 +744,68 @@
             if (!t || !u) return alert('Fill all fields');
             const c = `# ${t}\n\n## Links\n- [Home](${u})\n- [Docs](${u}/docs)`;
             showResult('llm-result', c);
+        }
+
+        // 15. Speed
+        function calcSpeed() {
+            const kb = parseFloat(document.getElementById('speed-size').value);
+            if (!kb) return;
+            showSpeedResults(kb);
+        }
+        function calcSpeedFromCode() {
+            const code = document.getElementById('speed-code').value;
+            if (!code) return;
+            // Rough KB calculation (1 char ~= 1 byte)
+            const kb = (new TextEncoder().encode(code).length) / 1024;
+            document.getElementById('speed-size').value = kb.toFixed(2);
+            showSpeedResults(kb);
+        }
+        function showSpeedResults(kb) {
+            // Speeds in Kbps (bits per sec) -> KBps (Bytes per sec)
+            // 3G: 1.6 Mbps = 200 KB/s
+            // 4G: 12 Mbps = 1500 KB/s
+            // Wifi: 30 Mbps = 3750 KB/s
+
+            const t3g = (kb / 200).toFixed(2);
+            const t4g = (kb / 1500).toFixed(2);
+            const twifi = (kb / 3750).toFixed(2);
+
+            let rating = "🚀 Excellent";
+            if (kb > 1000) rating = "⚠️ Heavy";
+            if (kb > 3000) rating = "🐌 Bloated";
+
+            const html = `Size: <strong>${kb.toFixed(2)} KB</strong> (${rating})\n\nEst. Load Times:\n📱 3G: ${t3g}s\n📶 4G: ${t4g}s\n🌐 WiFi: ${twifi}s`;
+            showResult('speed-result', html);
+        }
+
+        // 16. Recon
+        function reconSite() {
+            let u = document.getElementById('recon-url').value.trim();
+            if (!u) return;
+            if (!u.startsWith('http')) u = 'https://' + u;
+
+            try {
+                const url = new URL(u);
+                const domain = url.hostname;
+                const path = url.pathname;
+
+                const html = `
+<div style="display:flex; align-items:center; gap:1rem; margin-bottom:1rem;">
+    <img src="https://www.google.com/s2/favicons?domain=${domain}&sz=64" style="width:32px; height:32px; border-radius:4px;">
+    <strong>${domain}</strong>
+</div>
+
+<div style="display:grid; gap:0.5rem;">
+    <a href="https://pagespeed.web.dev/report?url=${encodeURIComponent(u)}" target="_blank" class="btn" style="background:#e2e8f0; font-size:0.9rem;">⚡ PageSpeed Insights</a>
+    <a href="https://builtwith.com/${domain}" target="_blank" class="btn" style="background:#e2e8f0; font-size:0.9rem;">🛠️ Tech Stack (BuiltWith)</a>
+    <a href="https://who.is/whois/${domain}" target="_blank" class="btn" style="background:#e2e8f0; font-size:0.9rem;">👤 Whois Lookup</a>
+    <a href="https://web.archive.org/web/*/${domain}" target="_blank" class="btn" style="background:#e2e8f0; font-size:0.9rem;">🕰️ Wayback Machine</a>
+</div>`;
+
+                const res = document.getElementById('recon-result');
+                res.innerHTML = html;
+                res.classList.add('active');
+            } catch (e) { alert('Invalid URL'); }
         }
 
         function showResult(id, content) {
