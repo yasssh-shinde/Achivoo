@@ -16,11 +16,23 @@
 - [About](https://www.venkateswarayasoftwaresolutions.in/about.html) - Mission, history, and internal philosophy.
 - [Team](https://www.venkateswarayasoftwaresolutions.in/team.html) - Meet the experts behind the growth strategies.
 
-## Recent Insights (Blog)
-- [The Hub & Spoke SEO Model](https://www.venkateswarayasoftwaresolutions.in/blog-hub-and-spoke-seo.html) - Technical guide on building topical authority and internal linking.
-- [Google Ads vs Meta Ads](https://www.venkateswarayasoftwaresolutions.in/blog-google-ads-vs-meta-ads.html) - Strategic ROI breakdown by user intent and discovery.
-- [AI Content Scaling](https://www.venkateswarayasoftwaresolutions.in/blog-ai-content-scaling.html) - VSS workflow for high-quality production with human-in-the-loop AI.
-- [Landing Page Optimization](https://www.venkateswarayasoftwaresolutions.in/blog-landing-page-tweaks.html) - 5 proven tactics for doubling conversion rates and improving ROI.
+## Featured Insights
+- [The Hub & Spoke SEO Model](https://www.venkateswarayasoftwaresolutions.in/blog-hub-and-spoke-seo.html) - Technical guide on building topical authority.
+- [Google Ads vs Meta Ads](https://www.venkateswarayasoftwaresolutions.in/blog-google-ads-vs-meta-ads.html) - Strategic ROI breakdown by user intent.
+- [AI Content Scaling](https://www.venkateswarayasoftwaresolutions.in/blog-ai-content-scaling.html) - VSS workflow for high-quality production with AI.
+- [Landing Page Optimization](https://www.venkateswarayasoftwaresolutions.in/blog-landing-page-tweaks.html) - 5 proven tactics for doubling conversion rates.
+
+## Local Growth Strategies
+- [Dominating Mumbai SEO](https://www.venkateswarayasoftwaresolutions.in/blog-seo-mumbai.html) - Authority-led growth for Mumbai brands.
+- [Thane Growth Tactic](https://www.venkateswarayasoftwaresolutions.in/blog-digital-marketing-thane.html) - Top 5 strategies for Thane-based businesses.
+- [Pune Startup Scaling](https://www.venkateswarayasoftwaresolutions.in/blog-performance-marketing-pune.html) - Performance marketing blueprint for Pune startups.
+- [Nagpur Local SEO](https://www.venkateswarayasoftwaresolutions.in/blog-local-seo-nagpur.html) - Capturing the Vidarbha digital market.
+- [Karanja Lad Transformation](https://www.venkateswarayasoftwaresolutions.in/blog-growth-strategy-karanja-lad.html) - Empowering local firms to go global.
+- [Mumbai SaaS SEO](https://www.venkateswarayasoftwaresolutions.in/blog-saas-growth-mumbai.html) - Scaling SaaS to $10M ARR from Mumbai.
+- [Thane E-commerce Growth](https://www.venkateswarayasoftwaresolutions.in/blog-ecommerce-seo-thane.html) - Turning clicks into loyalty in Thane.
+- [Pune Revenue Mastery](https://www.venkateswarayasoftwaresolutions.in/blog-startup-scaling-pune.html) - Moving beyond vanity metrics in Pune.
+- [Nagpur Lead Generation](https://www.venkateswarayasoftwaresolutions.in/blog-lead-gen-nagpur.html) - Master local lead gen in Nagpur.
+- [Karanja Lad Trust](https://www.venkateswarayasoftwaresolutions.in/blog-digital-modernization-karanja-lad.html) - Building trust online in emerging markets.
 
 ## Contact
-- [Contact Page](https://www.venkateswarayasoftwaresolutions.in/contact.html) - Request a growth audit and estimate revenue potential.
+- [Contact Page](https://www.venkateswarayasoftwaresolutions.in/contact.html) - Request a growth audit.
