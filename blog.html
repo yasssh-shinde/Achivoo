@@ -5,7 +5,18 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog | VSS</title>
+    <meta name="description"
+        content="VSS Blog - Insights on SEO, Performance Marketing, and Digital Growth. Learn how to scale your brand to $10M ARR and beyond." />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.venkateswarayasoftwaresolutions.in/blog.html">
+    <meta property="og:title" content="VSS Blog | Growth Marketing & SEO Insights">
+    <meta property="og:description"
+        content="Expert insights on scaling brands through data-backed SEO and performance marketing.">
+    <meta property="og:image" content="https://www.venkateswarayasoftwaresolutions.in/images/vss_og_main.png">
+
+    <title>VSS Blog | Growth Marketing & SEO Insights</title>
     <link rel="stylesheet" href="/src/style.css">
 </head>
 
@@ -20,298 +31,323 @@
                     <li><a href="/about.html">About</a></li>
                     <li><a href="/team.html">Team</a></li>
                     <li><a href="/tools.html">Tools</a></li>
-                    <li><a href="/blog.html" style="color: var(--color-accent);">Blog</a></li>
+                    <li><a href="/blog.html" class="active">Blog</a></li>
                 </ul>
             </nav>
-            <div class="header-actions" style="display: flex; gap: 1rem; align-items: center;">
+            <div class='header-actions' style='display: flex; gap: 1rem; align-items: center;'>
                 <button class="theme-toggle" aria-label="Toggle Theme">
                     <span class="sun-icon" style="display: none;">☀️</span>
                     <span class="moon-icon">🌙</span>
                 </button>
                 <a href="/contact.html" class="btn btn-primary header-cta"
-                    style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Get
-                    a Growth Audit</a>
+                    style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Get a Growth Audit</a>
                 <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
             </div>
         </div>
     </header>
 
-    <div id="mobile-menu"
-        style="position: fixed; top: 80px; left: 0; width: 100%; background: var(--color-bg); padding: 2rem; display: none; border-bottom: 1px solid var(--color-border); z-index: 999;">
-        <ul style="display: flex; flex-direction: column; gap: 1.5rem;">
-            <li><a href="/services.html">Services</a></li>
-            <li><a href="/case-studies.html">Case Studies</a></li>
-            <li><a href="/about.html">About</a></li>
-            <li><a href="/team.html">Team</a></li>
-            <li><a href="/tools.html">Tools</a></li>
-            <li><a href="/blog.html">Blog</a></li>
-            <li><a href="/contact.html">Contact</a></li>
-        </ul>
-    </div>
-
     <main>
-        <!-- Hero -->
-        <section class="section"
-            style="padding-top: calc(var(--header-height) + 4rem); background: var(--color-bg-alt);">
-            <div class="container text-center">
-                <h1>Insights for Growth</h1>
-                <p style="max-width: 700px; margin: 0 auto; color: var(--color-text-light);">Expert perspectives on SEO,
-                    Performance Marketing, and scalable revenue strategies.</p>
-            </div>
-        </section>
-
-        <!-- Blog Grid -->
-        <section class="section">
+        <section class="section" style="padding-top: calc(var(--header-height) + 6rem);">
             <div class="container">
-                <div class="card-grid">
+                <div class="text-center" style="max-width: 800px; margin: 0 auto 5rem auto;">
+                    <span
+                        style="color: var(--color-accent); font-size: 1rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em;">Growth
+                        Intelligence</span>
+                    <h1 style="font-size: 4rem; margin: 1rem 0; line-height: 1.1;">The VSS Engineering Blog</h1>
+                    <p style="font-size: 1.25rem; color: var(--color-text-light);">Deep dives into SEO architecture,
+                        performance marketing, and the technical side of scaling brands.</p>
+                </div>
+
+                <div class="card-grid"
+                    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 3rem;">
+
                     <!-- Post 1 -->
-                    <div class="card" style="padding: 0; overflow: hidden;">
+                    <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
                         <img src="/images/blog_seo.png" alt="Hub and Spoke SEO Model"
-                            style="height: 200px; width: 100%; object-fit: cover;">
-                        <div style="padding: 1.5rem;">
+                            style="height: 240px; width: 100%; object-fit: cover;">
+                        <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column;">
                             <span
                                 style="color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">SEO
                                 Strategy</span>
-                            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">The "Hub & Spoke" SEO Model Explained
-                            </h3>
-                            <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1.5rem;">How to
-                                structure your
-                                content to dominate high-competition keywords.</p>
+                            <h3 style="margin-top: 1rem; font-size: 1.5rem;">The "Hub & Spoke" SEO Model Explained</h3>
+                            <p
+                                style="color: var(--color-text-light); font-size: 1rem; margin-bottom: 2rem; flex-grow: 1;">
+                                How to structure your content to dominate high-competition keywords and build authority.
+                            </p>
                             <a href="/blog-hub-and-spoke-seo.html"
-                                style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
+                                style="color: var(--color-heading); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                Read Article <span>&rarr;</span>
+                            </a>
                         </div>
                     </div>
 
                     <!-- Post 2 -->
-                    <div class="card" style="padding: 0; overflow: hidden;">
-                        <img src="/images/blog_ads.png" alt="Google Ads vs Meta Ads"
-                            style="height: 200px; width: 100%; object-fit: cover;">
-                        <div style="padding: 1.5rem;">
+                    <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="/images/blog_ai.png" alt="AI Content Scaling"
+                            style="height: 240px; width: 100%; object-fit: cover;">
+                        <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column;">
                             <span
-                                style="color: var(--color-growth); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Paid
-                                Ads</span>
-                            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">Google Ads vs. Meta Ads: Where to Spend?
-                            </h3>
-                            <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1.5rem;">A
-                                data-driven breakdown
-                                of ROI across differeny industry verticals.</p>
-                            <a href="/blog-google-ads-vs-meta-ads.html"
-                                style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
+                                style="color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">AI
+                                Workflow</span>
+                            <h3 style="margin-top: 1rem; font-size: 1.5rem;">Scaling Content 10x with AI</h3>
+                            <p
+                                style="color: var(--color-text-light); font-size: 1rem; margin-bottom: 2rem; flex-grow: 1;">
+                                Our "Human-in-the-Loop" workflow for producing high-quality content at scale.</p>
+                            <a href="/blog-ai-content-scaling.html"
+                                style="color: var(--color-heading); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                Read Article <span>&rarr;</span>
+                            </a>
                         </div>
                     </div>
 
                     <!-- Post 3 -->
-                    <div class="card" style="padding: 0; overflow: hidden;">
-                        <img src="/images/blog_ai.png" alt="AI Content Scaling"
-                            style="height: 200px; width: 100%; object-fit: cover;">
-                        <div style="padding: 1.5rem;">
+                    <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="/images/blog_ads.png" alt="Google vs Meta Ads"
+                            style="height: 240px; width: 100%; object-fit: cover;">
+                        <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column;">
                             <span
-                                style="color: var(--color-primary); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">AI
-                                in Marketing</span>
-                            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">Scale Content 10x with AI (Without
-                                Losing Quality)</h3>
-                            <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1.5rem;">The
-                                exact workflow we
-                                use to produce high-ranking content at scale.</p>
-                            <a href="/blog-ai-content-scaling.html"
-                                style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
+                                style="color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Paid
+                                Advertising</span>
+                            <h3 style="margin-top: 1rem; font-size: 1.5rem;">Google Ads vs. Meta Ads: ROI Breakdown</h3>
+                            <p
+                                style="color: var(--color-text-light); font-size: 1rem; margin-bottom: 2rem; flex-grow: 1;">
+                                Which platform should you prioritize for your 2026 marketing budget?</p>
+                            <a href="/blog-google-ads-vs-meta-ads.html"
+                                style="color: var(--color-heading); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                Read Article <span>&rarr;</span>
+                            </a>
                         </div>
                     </div>
 
                     <!-- Post 4 -->
-                    <div class="card" style="padding: 0; overflow: hidden;">
-                        <img src="/images/blog_cro.png" alt="CRO Landing Page"
-                            style="height: 200px; width: 100%; object-fit: cover;">
-                        <div style="padding: 1.5rem;">
+                    <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="/images/blog_cro.png" alt="Landing Page Tweaks"
+                            style="height: 240px; width: 100%; object-fit: cover;">
+                        <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column;">
                             <span
-                                style="color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">CRO</span>
-                            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">5 Landing Page Tweaks to Dougle
-                                Conversions</h3>
-                            <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1.5rem;">Simple
-                                changes you can
-                                make today to improve your CVR.</p>
+                                style="color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">CRO
+                                / Optimization</span>
+                            <h3 style="margin-top: 1rem; font-size: 1.5rem;">5 Landing Page Tweaks for Higher ROI</h3>
+                            <p
+                                style="color: var(--color-text-light); font-size: 1rem; margin-bottom: 2rem; flex-grow: 1;">
+                                Stop losing leads. Small changes that can double your conversion rates overnight.</p>
                             <a href="/blog-landing-page-tweaks.html"
-                                style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
+                                style="color: var(--color-heading); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                Read Article <span>&rarr;</span>
+                            </a>
                         </div>
                     </div>
 
                     <!-- Post 5: Mumbai SEO -->
-                    <div class="card" style="padding: 0; overflow: hidden;">
+                    <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
                         <img src="/images/blog_seo.png" alt="Mumbai SEO Strategy"
-                            style="height: 200px; width: 100%; object-fit: cover;">
-                        <div style="padding: 1.5rem;">
+                            style="height: 240px; width: 100%; object-fit: cover;">
+                        <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column;">
                             <span
                                 style="color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Local
-                                Growth / Mumbai</span>
-                            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">Dominating Mumbai's Digital Landscape
-                            </h3>
-                            <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1.5rem;">Why
-                                authority-led SEO is the secret to scaling in India's financial capital.</p>
-                            <a href="/blog-seo-mumbai.html" style="color: var(--color-heading); font-weight: 600;">Read
-                                Article &rarr;</a>
+                                SEO / Mumbai</span>
+                            <h3 style="margin-top: 1rem; font-size: 1.5rem;">Dominating Mumbai's Digital Landscape</h3>
+                            <p
+                                style="color: var(--color-text-light); font-size: 1rem; margin-bottom: 2rem; flex-grow: 1;">
+                                Why authority-led SEO is the secret to scaling in India's financial capital.</p>
+                            <a href="/blog-seo-mumbai.html"
+                                style="color: var(--color-heading); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                Read Article <span>&rarr;</span>
+                            </a>
                         </div>
                     </div>
 
-                    <!-- Post 6: Thane Marketing -->
-                    <div class="card" style="padding: 0; overflow: hidden;">
+                    <!-- Post 6: Thane Growth -->
+                    <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
                         <img src="/images/blog_cro.png" alt="Thane Growth Strategy"
-                            style="height: 200px; width: 100%; object-fit: cover;">
-                        <div style="padding: 1.5rem;">
+                            style="height: 240px; width: 100%; object-fit: cover;">
+                        <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column;">
                             <span
                                 style="color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Growth
-                                Tactic / Thane</span>
-                            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">Top 5 Growth Strategies for Thane</h3>
-                            <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1.5rem;">How
-                                local brands can leverage SEO and content to dominate the market.</p>
+                                Strategy / Thane</span>
+                            <h3 style="margin-top: 1rem; font-size: 1.5rem;">Top 5 Growth Strategies for Thane</h3>
+                            <p
+                                style="color: var(--color-text-light); font-size: 1rem; margin-bottom: 2rem; flex-grow: 1;">
+                                How Thane brands can leverage digital marketing to dominate the local market.</p>
                             <a href="/blog-digital-marketing-thane.html"
-                                style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
+                                style="color: var(--color-heading); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                Read Article <span>&rarr;</span>
+                            </a>
                         </div>
                     </div>
 
                     <!-- Post 7: Pune Performance -->
-                    <div class="card" style="padding: 0; overflow: hidden;">
+                    <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
                         <img src="/images/blog_ads.png" alt="Pune Startup Growth"
-                            style="height: 200px; width: 100%; object-fit: cover;">
-                        <div style="padding: 1.5rem;">
+                            style="height: 240px; width: 100%; object-fit: cover;">
+                        <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column;">
                             <span
-                                style="color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Startup
-                                Scaling / Pune</span>
-                            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">Scaling Your Pune Startup</h3>
-                            <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1.5rem;">A
-                                strategic blueprint for Pune founders to scale revenue effectively.</p>
+                                style="color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Performance
+                                Marketing / Pune</span>
+                            <h3 style="margin-top: 1rem; font-size: 1.5rem;">Scaling Pune Startups: The 2026 Playbook
+                            </h3>
+                            <p
+                                style="color: var(--color-text-light); font-size: 1rem; margin-bottom: 2rem; flex-grow: 1;">
+                                Why precision distribution is the fuel for Pune's tech startup ecosystem.</p>
                             <a href="/blog-performance-marketing-pune.html"
-                                style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
+                                style="color: var(--color-heading); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                Read Article <span>&rarr;</span>
+                            </a>
                         </div>
                     </div>
 
-                    <!-- Post 8: Nagpur Local SEO -->
-                    <div class="card" style="padding: 0; overflow: hidden;">
+                    <!-- Post 8: Nagpur SEO -->
+                    <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
                         <img src="/images/blog_seo.png" alt="Nagpur Local SEO"
-                            style="height: 200px; width: 100%; object-fit: cover;">
-                        <div style="padding: 1.5rem;">
+                            style="height: 240px; width: 100%; object-fit: cover;">
+                        <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column;">
                             <span
                                 style="color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Local
                                 SEO / Nagpur</span>
-                            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">Local SEO for Nagpur Businesses</h3>
-                            <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1.5rem;">How to
-                                capture the Orange City's growing online market share.</p>
+                            <h3 style="margin-top: 1rem; font-size: 1.5rem;">Local SEO Secrets for Nagpur Brands</h3>
+                            <p
+                                style="color: var(--color-text-light); font-size: 1rem; margin-bottom: 2rem; flex-grow: 1;">
+                                How to dominate local search in the Orange City and capture the market.</p>
                             <a href="/blog-local-seo-nagpur.html"
-                                style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
+                                style="color: var(--color-heading); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                Read Article <span>&rarr;</span>
+                            </a>
                         </div>
                     </div>
 
                     <!-- Post 9: Karanja Lad Growth -->
-                    <div class="card" style="padding: 0; overflow: hidden;">
-                        <img src="/images/blog_seo.png" alt="Karanja Lad Growth"
-                            style="height: 200px; width: 100%; object-fit: cover;">
-                        <div style="padding: 1.5rem;">
+                    <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="/images/vss_og_main.png" alt="Karanja Lad Growth"
+                            style="height: 240px; width: 100%; object-fit: cover;">
+                        <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column;">
                             <span
-                                style="color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Digital
-                                Transformation</span>
-                            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">Karanja Lad Growth Strategy</h3>
-                            <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1.5rem;">
-                                Empowering local businesses in Karanja Lad to compete globally.</p>
+                                style="color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Modernization
+                                / Karanja Lad</span>
+                            <h3 style="margin-top: 1rem; font-size: 1.5rem;">Digital Power in Karanja Lad</h3>
+                            <p
+                                style="color: var(--color-text-light); font-size: 1rem; margin-bottom: 2rem; flex-grow: 1;">
+                                How local brands can go global by leveraging modern trust-building tactics.</p>
                             <a href="/blog-growth-strategy-karanja-lad.html"
-                                style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
+                                style="color: var(--color-heading); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                Read Article <span>&rarr;</span>
+                            </a>
                         </div>
                     </div>
 
                     <!-- Post 10: Mumbai SaaS -->
-                    <div class="card" style="padding: 0; overflow: hidden;">
-                        <img src="/images/blog_ai.png" alt="SaaS Growth Strategy"
-                            style="height: 200px; width: 100%; object-fit: cover;">
-                        <div style="padding: 1.5rem;">
+                    <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="/images/case_saas.png" alt="Mumbai SaaS Scaling"
+                            style="height: 240px; width: 100%; object-fit: cover;">
+                        <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column;">
                             <span
                                 style="color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">SaaS
                                 Growth / Mumbai</span>
-                            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">SaaS SEO Blueprint for Mumbai</h3>
-                            <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1.5rem;">The
-                                scientific approach to scaling your SaaS to $10M ARR.</p>
+                            <h3 style="margin-top: 1rem; font-size: 1.5rem;">The Mumbai SaaS Growth Blueprint</h3>
+                            <p
+                                style="color: var(--color-text-light); font-size: 1rem; margin-bottom: 2rem; flex-grow: 1;">
+                                Path to $10M ARR: Data-backed strategies for software growth in Mumbai.</p>
                             <a href="/blog-saas-growth-mumbai.html"
-                                style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
+                                style="color: var(--color-heading); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                Read Article <span>&rarr;</span>
+                            </a>
                         </div>
                     </div>
 
-                    <!-- Post 11: Thane E-commerce -->
-                    <div class="card" style="padding: 0; overflow: hidden;">
-                        <img src="/images/blog_cro.png" alt="Thane E-commerce Growth"
-                            style="height: 200px; width: 100%; object-fit: cover;">
-                        <div style="padding: 1.5rem;">
+                    <!-- Post 11: Thane E-com -->
+                    <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="/images/case_ecom.png" alt="Thane E-commerce Growth"
+                            style="height: 240px; width: 100%; object-fit: cover;">
+                        <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column;">
                             <span
                                 style="color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">E-commerce
                                 / Thane</span>
-                            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">E-commerce Growth in Thane</h3>
-                            <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1.5rem;">Turning
-                                clicks into loyalty for Thane-based online stores.</p>
+                            <h3 style="margin-top: 1rem; font-size: 1.5rem;">Thane E-commerce Success Strategies</h3>
+                            <p
+                                style="color: var(--color-text-light); font-size: 1rem; margin-bottom: 2rem; flex-grow: 1;">
+                                Turning local clicks into national loyalty: Scaling D2C brands from Thane.</p>
                             <a href="/blog-ecommerce-seo-thane.html"
-                                style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
+                                style="color: var(--color-heading); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                Read Article <span>&rarr;</span>
+                            </a>
                         </div>
                     </div>
 
-                    <!-- Post 12: Pune Real Revenue -->
-                    <div class="card" style="padding: 0; overflow: hidden;">
-                        <img src="/images/vss_og_main.png" alt="Pune Revenue Growth"
-                            style="height: 200px; width: 100%; object-fit: cover;">
-                        <div style="padding: 1.5rem;">
+                    <!-- Post 12: Pune Revenue -->
+                    <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="/images/vss_og_main.png" alt="Pune Revenue Focus"
+                            style="height: 240px; width: 100%; object-fit: cover;">
+                        <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column;">
                             <span
                                 style="color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Revenue
-                                Focus / Pune</span>
-                            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">Beyond Vanity Metrics in Pune</h3>
-                            <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1.5rem;">How
-                                Pune brands can build real revenue with a data-backed partner.</p>
+                                / Pune</span>
+                            <h3 style="margin-top: 1rem; font-size: 1.5rem;">Moving Beyond Vanity Metrics in Pune</h3>
+                            <p
+                                style="color: var(--color-text-light); font-size: 1rem; margin-bottom: 2rem; flex-grow: 1;">
+                                How brands build real ROI and verifiable growth instead of chasing clout.</p>
                             <a href="/blog-startup-scaling-pune.html"
-                                style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
+                                style="color: var(--color-heading); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                Read Article <span>&rarr;</span>
+                            </a>
                         </div>
                     </div>
 
                     <!-- Post 13: Nagpur Lead Gen -->
-                    <div class="card" style="padding: 0; overflow: hidden;">
-                        <img src="/images/blog_ads.png" alt="Nagpur Lead Generation"
-                            style="height: 200px; width: 100%; object-fit: cover;">
-                        <div style="padding: 1.5rem;">
+                    <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="/images/vss_og_main.png" alt="Nagpur Lead Generation"
+                            style="height: 240px; width: 100%; object-fit: cover;">
+                        <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column;">
                             <span
                                 style="color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Lead
                                 Gen / Nagpur</span>
-                            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">Nagpur Lead Generation Mastery</h3>
-                            <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1.5rem;">Outrank
-                                the competition and capture high-intent leads in Vidarbha.</p>
+                            <h3 style="margin-top: 1rem; font-size: 1.5rem;">Mastering Lead Generation in Nagpur</h3>
+                            <p
+                                style="color: var(--color-text-light); font-size: 1rem; margin-bottom: 2rem; flex-grow: 1;">
+                                Building a high-converting lead engine for service-based businesses in the Orange City.
+                            </p>
                             <a href="/blog-lead-gen-nagpur.html"
-                                style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
+                                style="color: var(--color-heading); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                Read Article <span>&rarr;</span>
+                            </a>
                         </div>
                     </div>
 
-                    <!-- Post 14: Karanja Lad Trust -->
-                    <div class="card" style="padding: 0; overflow: hidden;">
-                        <img src="/images/blog_seo.png" alt="Karanja Lad Trust"
-                            style="height: 200px; width: 100%; object-fit: cover;">
-                        <div style="padding: 1.5rem;">
+                    <!-- Post 14: Karanja Lad Modernization -->
+                    <div class="card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                        <img src="/images/vss_og_main.png" alt="Digital Modernization"
+                            style="height: 240px; width: 100%; object-fit: cover;">
+                        <div style="padding: 2rem; flex-grow: 1; display: flex; flex-direction: column;">
                             <span
                                 style="color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">Modernization
                                 / Karanja Lad</span>
-                            <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">Building Trust Online in Karanja Lad
-                            </h3>
-                            <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1.5rem;">Why
-                                authoritative content is the key to building local trust online.</p>
+                            <h3 style="margin-top: 1rem; font-size: 1.5rem;">Digital Modernization in Karanja Lad</h3>
+                            <p
+                                style="color: var(--color-text-light); font-size: 1rem; margin-bottom: 2rem; flex-grow: 1;">
+                                A guide to building trust online and scaling a local legacy to a national audience.</p>
                             <a href="/blog-digital-modernization-karanja-lad.html"
-                                style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
+                                style="color: var(--color-heading); font-weight: 700; text-decoration: none; display: flex; align-items: center; gap: 0.5rem;">
+                                Read Article <span>&rarr;</span>
+                            </a>
                         </div>
                     </div>
+
                 </div>
             </div>
         </section>
 
-        <section class="section text-center" style="background: #111827; color: #fff;">
-            <div class="container">
-                <h2>Subscribe for Growth Insights</h2>
-                <p style="color: var(--color-text-light); max-width: 500px; margin: 0.5rem auto 2rem;">Join 5,000+
-                    founders receiving
-                    our weekly growth tactics.</p>
-                <form onsubmit="event.preventDefault(); alert('Subscribed!');"
-                    style="max-width: 400px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                    <input type="email" placeholder="Enter your email" required
-                        style="flex: 1; padding: 0.75rem; border-radius: 6px; border: none;">
-                    <button type="submit" class="btn btn-accent" style="padding: 0.75rem 1.5rem;">Subscribe</button>
-                </form>
+        <!-- Newsletter CTA -->
+        <section class="section" style="background: var(--color-bg-alt);">
+            <div class="container text-center">
+                <div class="card" style="max-width: 800px; margin: 0 auto; padding: 4rem;">
+                    <h2 style="margin-bottom: 1.5rem;">Join the Growth Intelligence Network</h2>
+                    <p style="color: var(--color-text-light); margin-bottom: 3rem; font-size: 1.1rem;">Subscribe to get
+                        our
+                        latest growth frameworks and technical guides delivered to your inbox once a week.</p>
+                    <form style="display: flex; gap: 1rem; max-width: 500px; margin: 0 auto;">
+                        <input type="email" placeholder="Enter your email" required
+                            style="flex: 1; padding: 1rem; border-radius: 8px; border: 1px solid var(--color-border); background: var(--color-bg);">
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
@@ -330,25 +366,8 @@
                     <ul>
                         <li><a href="/about.html">About Us</a></li>
                         <li><a href="/team.html">Team</a></li>
-                        <li><a href="/careers.html">Careers</a></li>
                         <li><a href="/case-studies.html">Case Studies</a></li>
                         <li><a href="/contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col" style="flex: 1;">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="/services.html">SEO</a></li>
-                        <li><a href="/services.html">Performance Marketing</a></li>
-                        <li><a href="/services.html">Content Strategy</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col" style="flex: 1;">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="/blog.html">Blog</a></li>
-                        <li><a href="/faq.html">FAQ</a></li>
-                        <li><a href="#">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>

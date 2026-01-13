@@ -1,4 +1,38 @@
+# Robots.txt for Venkateswaraya Software Solutions (VSS)
+# https://www.venkateswarayasoftwaresolutions.in/
+
+# Allow all crawlers
 User-agent: *
 Allow: /
 
+# Disallow private areas
+Disallow: /server.js
+Disallow: /.agent/
+Disallow: /node_modules/
+
+# Specific rules for AI crawlers
+User-agent: GPTBot
+Allow: /
+Allow: /blog.html
+Allow: /blog-*.html
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+# Sitemap location
 Sitemap: https://www.venkateswarayasoftwaresolutions.in/sitemap.xml
+
+# Crawl delay (optional, helps prevent server overload)
+Crawl-delay: 1

@@ -22,3 +22,10 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Temporary files
+png_list.txt
+server.log
+
+# Admin files (if not needed in production)
+admin.html
