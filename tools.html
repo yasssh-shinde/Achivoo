@@ -10,13 +10,14 @@
     <style>
         /* Tool-specific Premium Styles */
         body {
-            background-color: #FAFAFA;
+            background-color: var(--color-bg);
+            color: var(--color-text);
         }
 
         .tools-hero {
             text-align: center;
             padding: 8rem 2rem 4rem;
-            background: linear-gradient(180deg, #fff 0%, #f1f5f9 100%);
+            background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-bg-alt) 100%);
         }
 
         .tools-hero h1 {
@@ -42,9 +43,9 @@
         }
 
         .tool-card {
-            background: #fff;
+            background: var(--color-bg);
             border-radius: 16px;
-            border: 1px solid #E2E8F0;
+            border: 1px solid var(--color-border);
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
             padding: 2rem;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -107,12 +108,13 @@
         .tool-textarea {
             width: 100%;
             padding: 0.75rem 1rem;
-            border: 1px solid #CBD5E1;
+            border: 1px solid var(--color-border);
             border-radius: 8px;
             font-family: var(--font-main);
             font-size: 0.95rem;
             transition: border-color 0.2s, box-shadow 0.2s;
-            background: #fff;
+            background: var(--color-bg);
+            color: var(--color-text);
         }
 
         .tool-input:focus,
@@ -131,7 +133,7 @@
             width: 100%;
             margin-top: auto;
             background: var(--color-heading);
-            color: #fff;
+            color: var(--color-btn-primary-text, #fff);
             padding: 0.875rem;
             border-radius: 8px;
             font-weight: 600;
@@ -147,13 +149,13 @@
 
         .result-box {
             margin-top: 1.5rem;
-            background: #F8FAFC;
-            border: 1px dashed #CBD5E1;
+            background: var(--color-bg-alt);
+            border: 1px dashed var(--color-border);
             border-radius: 8px;
             padding: 1rem;
             font-family: 'Courier New', Courier, monospace;
             font-size: 0.9rem;
-            color: #334155;
+            color: var(--color-text);
             white-space: pre-wrap;
             word-break: break-all;
             display: none;
@@ -169,8 +171,8 @@
             position: absolute;
             top: 0.5rem;
             right: 0.5rem;
-            background: #fff;
-            border: 1px solid #e2e8f0;
+            background: var(--color-bg);
+            border: 1px solid var(--color-border);
             padding: 0.25rem 0.5rem;
             border-radius: 4px;
             font-size: 0.75rem;
@@ -197,7 +199,8 @@
 
         /* SERP Specific */
         .serp-preview-card {
-            background: #fff;
+            background: var(--color-bg);
+            /* Google search is always white */
             padding: 1rem;
             border-radius: 8px;
             box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
@@ -222,6 +225,10 @@
                 </ul>
             </nav>
             <div class="header-actions" style="display: flex; gap: 1rem; align-items: center;">
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <span class="sun-icon" style="display: none;">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
                 <a href="/contact.html" class="btn btn-primary header-cta"
                     style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Get a Growth Audit</a>
                 <button class="mobile-toggle" aria-label="Toggle Menu">☰</button>
@@ -230,7 +237,7 @@
     </header>
 
     <div id="mobile-menu"
-        style="position: fixed; top: 80px; left: 0; width: 100%; background: #fff; padding: 2rem; display: none; border-bottom: 1px solid #eee; z-index: 999;">
+        style="position: fixed; top: 80px; left: 0; width: 100%; background: var(--color-bg); padding: 2rem; display: none; border-bottom: 1px solid var(--color-border); z-index: 999;">
         <ul style="display: flex; flex-direction: column; gap: 1.5rem;">
             <li><a href="/services.html">Services</a></li>
             <li><a href="/case-studies.html">Case Studies</a></li>
@@ -250,7 +257,7 @@
             </div>
         </section>
 
-        <section style="background: #FAFAFA;">
+        <section>
             <div class="container">
                 <div class="tools-grid">
 
@@ -454,13 +461,13 @@
                         <div
                             style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.5rem; margin-bottom: 1rem;">
                             <button onclick="generateLorem(1)"
-                                style="padding: 0.5rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; cursor: pointer;">1
+                                style="padding: 0.5rem; background: var(--color-bg); border: 1px solid var(--color-border); color: var(--color-text); border-radius: 6px; cursor: pointer;">1
                                 Para</button>
                             <button onclick="generateLorem(3)"
-                                style="padding: 0.5rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; cursor: pointer;">3
+                                style="padding: 0.5rem; background: var(--color-bg); border: 1px solid var(--color-border); color: var(--color-text); border-radius: 6px; cursor: pointer;">3
                                 Paras</button>
                             <button onclick="generateLorem(5)"
-                                style="padding: 0.5rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 6px; cursor: pointer;">5
+                                style="padding: 0.5rem; background: var(--color-bg); border: 1px solid var(--color-border); color: var(--color-text); border-radius: 6px; cursor: pointer;">5
                                 Paras</button>
                         </div>
                         <div id="lorem-result" class="result-box" style="max-height: 150px; overflow-y: auto;"></div>

@@ -23,7 +23,11 @@
                     <li><a href="/blog.html">Blog</a></li>
                 </ul>
             </nav>
-            <div class="header-actions" style="display: flex; gap: 1rem; align-items: center;">
+            <div class='header-actions' style='display: flex; gap: 1rem; align-items: center;'>
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <span class="sun-icon" style="display: none;"></span>
+                    <span class="moon-icon"></span>
+                </button>
                 <a href="/contact.html" class="btn btn-primary header-cta"
                     style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Get
                     a Growth Audit</a>
@@ -47,21 +51,21 @@
                 </h1>
 
                 <div
-                    style="display: flex; align-items: center; gap: 1rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid #eee;">
-                    <div style="width: 48px; height: 48px; border-radius: 50%; background: #eee; overflow: hidden;">
+                    style="display: flex; align-items: center; gap: 1rem; margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid var(--color-border);">
+                    <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--color-bg-alt); overflow: hidden;">
                         <img src="/images/team_vss.png" alt="VSS Expert"
                             style="width: 100%; height: 100%; object-fit: cover;">
                     </div>
                     <div>
                         <p style="margin: 0; font-weight: 600;">VSS Performance Team</p>
-                        <p style="margin: 0; font-size: 0.8rem; color: #64748b;">Jan 12, 2026 • 6 min read</p>
+                        <p style="margin: 0; font-size: 0.8rem; color: var(--color-text-light);">Jan 12, 2026 • 6 min read</p>
                     </div>
                 </div>
 
                 <img src="/images/blog_ads.png" alt="Google Ads vs Meta Ads"
                     style="width: 100%; border-radius: 12px; margin-bottom: 3rem;">
 
-                <div class="prose" style="font-size: 1.1rem; line-height: 1.8; color: #334155;">
+                <div class="prose" style="font-size: 1.1rem; line-height: 1.8; color: var(--color-text);">
                     <p>One of the most common questions we get from founders is: "Should I be spending my budget on
                         Google or Meta?" The answer, as you might expect, is "it depends." But let's look at the data to
                         understand why.</p>

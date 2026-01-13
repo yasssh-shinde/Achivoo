@@ -24,6 +24,10 @@
                 </ul>
             </nav>
             <div class="header-actions" style="display: flex; gap: 1rem; align-items: center;">
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <span class="sun-icon" style="display: none;">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
                 <a href="/contact.html" class="btn btn-primary header-cta"
                     style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Get
                     a Growth Audit</a>
@@ -33,7 +37,7 @@
     </header>
 
     <div id="mobile-menu"
-        style="position: fixed; top: 80px; left: 0; width: 100%; background: #fff; padding: 2rem; display: none; border-bottom: 1px solid #eee; z-index: 999;">
+        style="position: fixed; top: 80px; left: 0; width: 100%; background: var(--color-bg); padding: 2rem; display: none; border-bottom: 1px solid var(--color-border); z-index: 999;">
         <ul style="display: flex; flex-direction: column; gap: 1.5rem;">
             <li><a href="/services.html">Services</a></li>
             <li><a href="/case-studies.html">Case Studies</a></li>
@@ -60,13 +64,13 @@
         <section class="section">
             <div class="container">
                 <div class="split-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem;">
-                    <div style="background: #fff; padding: 2rem; border-radius: 12px; border: 1px solid #e2e8f0;">
+                    <div style="background: var(--color-bg); padding: 2rem; border-radius: 12px; border: 1px solid var(--color-border);">
                         <span
                             style="color: var(--color-growth); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em;">Our
                             Mission</span>
                         <h2 style="margin-top: 1rem; font-size: 1.75rem;">Helping businesses achieve scalable,
                             predictable growth.</h2>
-                        <p style="margin-top: 1rem; color: #64748b;">We exist to bridge the gap between "marketing
+                        <p style="margin-top: 1rem; color: var(--color-text-light);">We exist to bridge the gap between "marketing
                             activity" and "business results". Every campaign we launch is tied to a revenue goal.</p>
                     </div>
                     <div style="background: #111827; padding: 2rem; border-radius: 12px; color: #fff;">
@@ -75,7 +79,7 @@
                             Vision</span>
                         <h2 style="margin-top: 1rem; font-size: 1.75rem; color: #fff;">To be the global growth partner
                             for ambitious brands.</h2>
-                        <p style="margin-top: 1rem; color: #94a3b8;">From New York to Riyadh, we are building a network
+                        <p style="margin-top: 1rem; color: var(--color-text-light);">From New York to Riyadh, we are building a network
                             of success stories, redefining what clients expect from an agency.</p>
                     </div>
                 </div>
@@ -83,26 +87,26 @@
         </section>
 
         <!-- Philosophy -->
-        <section class="section" style="background: #f8fafc;">
+        <section class="section" style="background: var(--color-bg-alt);">
             <div class="container">
                 <h2 class="text-center" style="margin-bottom: 3rem;">The VSS Standard</h2>
                 <div class="card-grid">
-                    <div class="card" style="border: none; background: #fff;">
+                    <div class="card" style="border: none; background: var(--color-bg);">
                         <div style="font-size: 2rem; margin-bottom: 1rem;">🎯</div>
                         <h4>Strategy First</h4>
-                        <p style="color: #64748b; font-size: 0.95rem;">Tactics without strategy is noise. We build the
+                        <p style="color: var(--color-text-light); font-size: 0.95rem;">Tactics without strategy is noise. We build the
                             roadmap before we drive.</p>
                     </div>
-                    <div class="card" style="border: none; background: #fff;">
+                    <div class="card" style="border: none; background: var(--color-bg);">
                         <div style="font-size: 2rem; margin-bottom: 1rem;">📊</div>
                         <h4>Data Backed</h4>
-                        <p style="color: #64748b; font-size: 0.95rem;">We don't guess. We test, measure, and optimize
+                        <p style="color: var(--color-text-light); font-size: 0.95rem;">We don't guess. We test, measure, and optimize
                             based on hard data.</p>
                     </div>
-                    <div class="card" style="border: none; background: #fff;">
+                    <div class="card" style="border: none; background: var(--color-bg);">
                         <div style="font-size: 2rem; margin-bottom: 1rem;">🤝</div>
                         <h4>Total Transparency</h4>
-                        <p style="color: #64748b; font-size: 0.95rem;">You'll always know where your budget is going and
+                        <p style="color: var(--color-text-light); font-size: 0.95rem;">You'll always know where your budget is going and
                             what it's returning.</p>
                     </div>
                 </div>
@@ -124,7 +128,7 @@
             <div class="footer-top">
                 <div class="footer-col" style="flex: 2; min-width: 300px;">
                     <a href="/" class="logo" style="color: #fff; display: block; margin-bottom: 1rem;">VSS.</a>
-                    <p style="color: #94a3b8; max-width: 400px;">A premium digital growth partner for ambitious brands.
+                    <p style="color: var(--color-text-light); max-width: 400px;">A premium digital growth partner for ambitious brands.
                         We focus on what matters: Revenue, ROI, and Results.</p>
                 </div>
                 <div class="footer-col" style="flex: 1;">

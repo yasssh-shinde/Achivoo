@@ -30,7 +30,11 @@
                     <li><a href="/blog.html">Blog</a></li>
                 </ul>
             </nav>
-            <div class="header-actions" style="display: flex; gap: 1rem; align-items: center;">
+            <div class='header-actions' style='display: flex; gap: 1rem; align-items: center;'>
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <span class="sun-icon" style="display: none;"></span>
+                    <span class="moon-icon"></span>
+                </button>
                 <a href="/contact.html" class="btn btn-primary header-cta"
                     style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Get
                     a Growth Audit</a>
@@ -40,7 +44,7 @@
     </header>
 
     <div id="mobile-menu"
-        style="position: fixed; top: 80px; left: 0; width: 100%; background: #fff; padding: 2rem; display: none; border-bottom: 1px solid #eee; z-index: 999;">
+        style="position: fixed; top: 80px; left: 0; width: 100%; background: var(--color-bg); padding: 2rem; display: none; border-bottom: 1px solid var(--color-border); z-index: 999;">
         <ul style="display: flex; flex-direction: column; gap: 1.5rem;">
             <li><a href="/services.html">Services</a></li>
             <li><a href="/case-studies.html">Case Studies</a></li>
@@ -76,21 +80,21 @@
                                 style="color: var(--color-accent); font-weight: 600; font-size: 0.9rem; text-transform: uppercase;">SaaS
                                 / B2B</span>
                             <h2 style="margin-top: 0.5rem; margin-bottom: 1rem;">Scaling a Fintech SaaS to $2M ARR</h2>
-                            <p style="margin-bottom: 1.5rem; color: #64748b;"><strong>Challenge:</strong> High intent
+                            <p style="margin-bottom: 1.5rem; color: var(--color-text-light);"><strong>Challenge:</strong> High intent
                                 keywords were dominated by competitors. CPL was >$150.</p>
 
                             <div class="mini-stats-grid">
                                 <div
-                                    style="padding: 1rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;">
+                                    style="padding: 1rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 8px;">
                                     <span
                                         style="display: block; font-size: 1.5rem; font-weight: 700; color: var(--color-growth);">+215%</span>
-                                    <span style="font-size: 0.875rem; color: #64748b;">Organic Leads</span>
+                                    <span style="font-size: 0.875rem; color: var(--color-text-light);">Organic Leads</span>
                                 </div>
                                 <div
-                                    style="padding: 1rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;">
+                                    style="padding: 1rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 8px;">
                                     <span
                                         style="display: block; font-size: 1.5rem; font-weight: 700; color: var(--color-heading);">-45%</span>
-                                    <span style="font-size: 0.875rem; color: #64748b;">CAC</span>
+                                    <span style="font-size: 0.875rem; color: var(--color-text-light);">CAC</span>
                                 </div>
                             </div>
 
@@ -108,21 +112,21 @@
                                 / D2C</span>
                             <h2 style="margin-top: 0.5rem; margin-bottom: 1rem;">From Stagnation to 5x ROAS for Luxury
                                 Retailer</h2>
-                            <p style="margin-bottom: 1.5rem; color: #64748b;"><strong>Challenge:</strong> Brand was
+                            <p style="margin-bottom: 1.5rem; color: var(--color-text-light);"><strong>Challenge:</strong> Brand was
                                 relying solely on social reach. Paid ads were burning cash without return.</p>
 
                             <div class="mini-stats-grid">
                                 <div
-                                    style="padding: 1rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;">
+                                    style="padding: 1rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 8px;">
                                     <span
                                         style="display: block; font-size: 1.5rem; font-weight: 700; color: var(--color-growth);">5.2x</span>
-                                    <span style="font-size: 0.875rem; color: #64748b;">ROAS</span>
+                                    <span style="font-size: 0.875rem; color: var(--color-text-light);">ROAS</span>
                                 </div>
                                 <div
-                                    style="padding: 1rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;">
+                                    style="padding: 1rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 8px;">
                                     <span
                                         style="display: block; font-size: 1.5rem; font-weight: 700; color: var(--color-heading);">+80%</span>
-                                    <span style="font-size: 0.875rem; color: #64748b;">Revenue</span>
+                                    <span style="font-size: 0.875rem; color: var(--color-text-light);">Revenue</span>
                                 </div>
                             </div>
 
@@ -144,21 +148,21 @@
                                 Business</span>
                             <h2 style="margin-top: 0.5rem; margin-bottom: 1rem;">Domination of Local Search for Legal
                                 Firm</h2>
-                            <p style="margin-bottom: 1.5rem; color: #64748b;"><strong>Challenge:</strong> Firm was
+                            <p style="margin-bottom: 1.5rem; color: var(--color-text-light);"><strong>Challenge:</strong> Firm was
                                 invisible in Maps Pack. Leads were expensive and low quality.</p>
 
                             <div class="mini-stats-grid">
                                 <div
-                                    style="padding: 1rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;">
+                                    style="padding: 1rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 8px;">
                                     <span
                                         style="display: block; font-size: 1.5rem; font-weight: 700; color: var(--color-growth);">#1</span>
-                                    <span style="font-size: 0.875rem; color: #64748b;">Rank for Money Keywords</span>
+                                    <span style="font-size: 0.875rem; color: var(--color-text-light);">Rank for Money Keywords</span>
                                 </div>
                                 <div
-                                    style="padding: 1rem; background: #fff; border: 1px solid #e2e8f0; border-radius: 8px;">
+                                    style="padding: 1rem; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: 8px;">
                                     <span
                                         style="display: block; font-size: 1.5rem; font-weight: 700; color: var(--color-heading);">+300%</span>
-                                    <span style="font-size: 0.875rem; color: #64748b;">Call Volume</span>
+                                    <span style="font-size: 0.875rem; color: var(--color-text-light);">Call Volume</span>
                                 </div>
                             </div>
 
@@ -174,8 +178,8 @@
         <section class="section text-center" style="background: #111827; color: #fff;">
             <div class="container">
                 <h2 style="color: #fff;">See What We Can Do For You</h2>
-                <p style="color: #94a3b8; margin-bottom: 2rem;">Your success story is next.</p>
-                <a href="/contact.html" class="btn btn-primary" style="background: #fff; color: #000;">Book a Strategy
+                <p style="color: var(--color-text-light); margin-bottom: 2rem;">Your success story is next.</p>
+                <a href="/contact.html" class="btn btn-primary" style="background: var(--color-bg); color: #000;">Book a Strategy
                     Call</a>
             </div>
         </section>
@@ -186,7 +190,7 @@
             <div class="footer-top">
                 <div class="footer-col" style="flex: 2; min-width: 300px;">
                     <a href="/" class="logo" style="color: #fff; display: block; margin-bottom: 1rem;">VSS.</a>
-                    <p style="color: #94a3b8; max-width: 400px;">A premium digital growth partner for ambitious brands.
+                    <p style="color: var(--color-text-light); max-width: 400px;">A premium digital growth partner for ambitious brands.
                         We focus on what matters: Revenue, ROI, and Results.</p>
                 </div>
                 <div class="footer-col" style="flex: 1;">

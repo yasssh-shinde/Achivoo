@@ -24,6 +24,10 @@
                 </ul>
             </nav>
             <div class="header-actions" style="display: flex; gap: 1rem; align-items: center;">
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <span class="sun-icon" style="display: none;">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
                 <a href="/contact.html" class="btn btn-primary header-cta"
                     style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Get
                     a Growth Audit</a>
@@ -33,7 +37,7 @@
     </header>
 
     <div id="mobile-menu"
-        style="position: fixed; top: 80px; left: 0; width: 100%; background: #fff; padding: 2rem; display: none; border-bottom: 1px solid #eee; z-index: 999;">
+        style="position: fixed; top: 80px; left: 0; width: 100%; background: var(--color-bg); padding: 2rem; display: none; border-bottom: 1px solid var(--color-border); z-index: 999;">
         <ul style="display: flex; flex-direction: column; gap: 1.5rem;">
             <li><a href="/services.html">Services</a></li>
             <li><a href="/case-studies.html">Case Studies</a></li>
@@ -70,7 +74,7 @@
                                 Strategy</span>
                             <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">The "Hub & Spoke" SEO Model Explained
                             </h3>
-                            <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1.5rem;">How to structure your
+                            <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1.5rem;">How to structure your
                                 content to dominate high-competition keywords.</p>
                             <a href="/blog-hub-and-spoke-seo.html"
                                 style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
@@ -87,7 +91,7 @@
                                 Ads</span>
                             <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">Google Ads vs. Meta Ads: Where to Spend?
                             </h3>
-                            <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1.5rem;">A data-driven breakdown
+                            <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1.5rem;">A data-driven breakdown
                                 of ROI across differeny industry verticals.</p>
                             <a href="/blog-google-ads-vs-meta-ads.html"
                                 style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
@@ -104,7 +108,7 @@
                                 in Marketing</span>
                             <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">Scale Content 10x with AI (Without
                                 Losing Quality)</h3>
-                            <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1.5rem;">The exact workflow we
+                            <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1.5rem;">The exact workflow we
                                 use to produce high-ranking content at scale.</p>
                             <a href="/blog-ai-content-scaling.html"
                                 style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
@@ -120,7 +124,7 @@
                                 style="color: var(--color-accent); font-size: 0.8rem; font-weight: 600; text-transform: uppercase;">CRO</span>
                             <h3 style="margin-top: 0.5rem; font-size: 1.25rem;">5 Landing Page Tweaks to Dougle
                                 Conversions</h3>
-                            <p style="color: #64748b; font-size: 0.9rem; margin-bottom: 1.5rem;">Simple changes you can
+                            <p style="color: var(--color-text-light); font-size: 0.9rem; margin-bottom: 1.5rem;">Simple changes you can
                                 make today to improve your CVR.</p>
                             <a href="/blog-landing-page-tweaks.html"
                                 style="color: var(--color-heading); font-weight: 600;">Read Article &rarr;</a>
@@ -134,7 +138,7 @@
         <section class="section text-center" style="background: #111827; color: #fff;">
             <div class="container">
                 <h2>Subscribe for Growth Insights</h2>
-                <p style="color: #94a3b8; max-width: 500px; margin: 0.5rem auto 2rem;">Join 5,000+ founders receiving
+                <p style="color: var(--color-text-light); max-width: 500px; margin: 0.5rem auto 2rem;">Join 5,000+ founders receiving
                     our weekly growth tactics.</p>
                 <form onsubmit="event.preventDefault(); alert('Subscribed!');"
                     style="max-width: 400px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 0.5rem;">
@@ -151,7 +155,7 @@
             <div class="footer-top">
                 <div class="footer-col" style="flex: 2; min-width: 300px;">
                     <a href="/" class="logo" style="color: #fff; display: block; margin-bottom: 1rem;">VSS.</a>
-                    <p style="color: #94a3b8; max-width: 400px;">A premium digital growth partner for ambitious brands.
+                    <p style="color: var(--color-text-light); max-width: 400px;">A premium digital growth partner for ambitious brands.
                         We focus on what matters: Revenue, ROI, and Results.</p>
                 </div>
                 <div class="footer-col" style="flex: 1;">

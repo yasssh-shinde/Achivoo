@@ -24,6 +24,10 @@
                 </ul>
             </nav>
             <div class="header-actions" style="display: flex; gap: 1rem; align-items: center;">
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <span class="sun-icon" style="display: none;">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
                 <a href="/contact.html" class="btn btn-primary header-cta"
                     style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Get
                     a Growth Audit</a>
@@ -33,7 +37,7 @@
     </header>
 
     <div id="mobile-menu"
-        style="position: fixed; top: 80px; left: 0; width: 100%; background: #fff; padding: 2rem; display: none; border-bottom: 1px solid #eee; z-index: 999;">
+        style="position: fixed; top: 80px; left: 0; width: 100%; background: var(--color-bg); padding: 2rem; display: none; border-bottom: 1px solid var(--color-border); z-index: 999;">
         <ul style="display: flex; flex-direction: column; gap: 1.5rem;">
             <li><a href="/services.html">Services</a></li>
             <li><a href="/case-studies.html">Case Studies</a></li>
@@ -46,62 +50,105 @@
     </div>
 
     <main>
-        <section class="section" style="padding-top: calc(var(--header-height) + 4rem);">
+        <!-- Hero with Calculator -->
+        <section class="section"
+            style="padding-top: calc(var(--header-height) + 4rem); background: var(--color-bg-alt);">
+            <div class="container">
+                <div class="split-layout"
+                    style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                    <div>
+                        <h1>Estimate Your Growth Potential</h1>
+                        <p style="color: var(--color-text-light); font-size: 1.1rem; margin-bottom: 2rem;">Use our proprietary model to
+                            see how much revenue you're leaving on the table and how we can help you capture it.</p>
+
+                        <div
+                            style="background: var(--color-bg); padding: 2rem; border-radius: 12px; border: 1px solid var(--color-border); box-shadow: 0 10px 30px -10px rgba(0,0,0,0.05);">
+                            <div style="margin-bottom: 1.5rem;">
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Current Monthly
+                                    Revenue ($)</label>
+                                <input type="number" id="calc-revenue" placeholder="50000"
+                                    style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 6px; background: var(--color-bg); color: var(--color-text);">
+                            </div>
+                            <div style="margin-bottom: 1.5rem;">
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Monthly Traffic
+                                    (Visitors)</label>
+                                <input type="number" id="calc-traffic" placeholder="10000"
+                                    style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 6px; background: var(--color-bg); color: var(--color-text);">
+                            </div>
+                            <div style="margin-bottom: 1.5rem;">
+                                <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Current
+                                    Conversion Rate (%)</label>
+                                <input type="number" id="calc-cr" placeholder="2"
+                                    style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 6px; background: var(--color-bg); color: var(--color-text);">
+                            </div>
+                            <button onclick="calcGrowth()" class="btn btn-primary" style="width: 100%;">Calculate
+                                Potential</button>
+                            <div id="calc-result" style="display: none;"></div>
+                        </div>
+                    </div>
+                    <div style="text-align: center;">
+                        <img src="/images/vss_growth_chart.png" alt="Growth Potential"
+                            style="width: 100%; max-width: 500px; margin: 0 auto; border-radius: 12px;">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact-form" class="section">
             <div class="container">
                 <div class="split-layout" style="display: grid; grid-template-columns: 1fr 1fr; gap: 6rem;">
                     <div>
-                        <h1 style="margin-bottom: 1.5rem;">Let's Engineer Your Growth.</h1>
-                        <p style="color: #64748b; font-size: 1.1rem; margin-bottom: 3rem;">Ready to move beyond vanity
-                            metrics? Fill out the form to schedule your free growth strategy call. We'll audit your
-                            current state and show you the roadmap to 2x revenue.</p>
+                        <h2 style="margin-bottom: 1.5rem;">Ready to Engineer Your Growth?</h2>
+                        <p style="color: var(--color-text-light); font-size: 1.1rem; margin-bottom: 3rem;">Schedule your free growth
+                            strategy call. We'll audit your current state and show you the roadmap to 2x revenue.</p>
 
                         <div style="margin-bottom: 2rem;">
                             <h3 style="font-size: 1.25rem;">Email Us</h3>
-                            <a href="mailto:growth@vss.com"
-                                style="color: var(--color-accent); font-size: 1.1rem;">yash.shinde@venkateswarayasoftwaresolutions.in</a>
+                            <a href="mailto:growth@venkateswarayasoftwaresolutions.in"
+                                style="color: var(--color-accent); font-size: 1.1rem; word-break: break-all;">growth@venkateswarayasoftwaresolutions.in</a>
                         </div>
 
                         <div>
                             <h3 style="font-size: 1.25rem;">Offices</h3>
-                            <p style="color: #64748b;">Pune,London, UK • New York, USA • Riyadh, KSA</p>
+                            <p style="color: var(--color-text-light);">Pune, India • London, UK • New York, USA</p>
                         </div>
                     </div>
 
                     <div
-                        style="background: #fff; padding: 3rem; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 20px 40px -10px rgba(0,0,0,0.05);">
+                        style="background: var(--color-bg); padding: 3rem; border-radius: 12px; border: 1px solid var(--color-border); box-shadow: 0 20px 40px -10px rgba(0,0,0,0.05);">
                         <form onsubmit="event.preventDefault(); alert('Thank you! We will be in touch shortly.');"
                             style="display: flex; flex-direction: column; gap: 1.5rem;">
                             <div>
                                 <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Full
                                     Name</label>
                                 <input type="text" id="name" required
-                                    style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit;">
+                                    style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 6px; font-family: inherit; background: var(--color-bg); color: var(--color-text);">
                             </div>
                             <div>
                                 <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Work
                                     Email</label>
                                 <input type="email" id="email" required
-                                    style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit;">
+                                    style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 6px; font-family: inherit; background: var(--color-bg); color: var(--color-text);">
                             </div>
                             <div>
                                 <label for="company"
                                     style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Company
                                     Name</label>
                                 <input type="text" id="company" required
-                                    style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit;">
+                                    style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 6px; font-family: inherit; background: var(--color-bg); color: var(--color-text);">
                             </div>
                             <div>
                                 <label for="website"
                                     style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Website URL</label>
                                 <input type="url" id="website" placeholder="https://"
-                                    style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit;">
+                                    style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 6px; font-family: inherit; background: var(--color-bg); color: var(--color-text);">
                             </div>
                             <div>
                                 <label for="goal"
                                     style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Monthly Revenue
                                     Goal</label>
                                 <select id="goal"
-                                    style="width: 100%; padding: 0.75rem; border: 1px solid #cbd5e1; border-radius: 6px; font-family: inherit; background: #fff;">
+                                    style="width: 100%; padding: 0.75rem; border: 1px solid var(--color-border); border-radius: 6px; font-family: inherit; background: var(--color-bg); color: var(--color-text);">
                                     <option value="">Select a range</option>
                                     <option value="10k-50k">$10k - $50k</option>
                                     <option value="50k-100k">$50k - $100k</option>
@@ -123,7 +170,7 @@
             <div class="footer-top">
                 <div class="footer-col" style="flex: 2; min-width: 300px;">
                     <a href="/" class="logo" style="color: #fff; display: block; margin-bottom: 1rem;">VSS.</a>
-                    <p style="color: #94a3b8; max-width: 400px;">A premium digital growth partner for ambitious brands.
+                    <p style="color: var(--color-text-light); max-width: 400px;">A premium digital growth partner for ambitious brands.
                         We focus on what matters: Revenue, ROI, and Results.</p>
                 </div>
                 <div class="footer-col" style="flex: 1;">

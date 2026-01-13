@@ -39,6 +39,10 @@
                 </ul>
             </nav>
             <div class="header-actions" style="display: flex; gap: 1rem; align-items: center;">
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <span class="sun-icon" style="display: none;">☀️</span>
+                    <span class="moon-icon">🌙</span>
+                </button>
                 <a href="/contact.html" class="btn btn-primary header-cta"
                     style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Get
                     a Growth Audit</a>
@@ -48,7 +52,7 @@
     </header>
 
     <div id="mobile-menu"
-        style="position: fixed; top: 80px; left: 0; width: 100%; background: #fff; padding: 2rem; display: none; border-bottom: 1px solid #eee; z-index: 999;">
+        style="position: fixed; top: 80px; left: 0; width: 100%; background: var(--color-bg); padding: 2rem; display: none; border-bottom: 1px solid var(--color-border); z-index: 999;">
         <ul style="display: flex; flex-direction: column; gap: 1.5rem;">
             <li><a href="/services.html">Services</a></li>
             <li><a href="/case-studies.html">Case Studies</a></li>
@@ -84,7 +88,7 @@
                         <p style="margin-bottom: 1.5rem;"><strong>Problem:</strong> Your website is invisible to your
                             ideal customers.</p>
                         <div
-                            style="background: #f8fafc; padding: 1.5rem; border-left: 4px solid var(--color-accent); margin-bottom: 1.5rem;">
+                            style="background: var(--color-bg-alt); padding: 1.5rem; border-left: 4px solid var(--color-accent); margin-bottom: 1.5rem;">
                             <p style="font-size: 0.95rem;"><strong>Strategy:</strong> Comprehensive technical audit,
                                 on-page optimization, and authority-building content campaigns.</p>
                         </div>
@@ -109,7 +113,7 @@
                         <p style="margin-bottom: 1.5rem;"><strong>Problem:</strong> Ad spend is high, but conversions
                             are low.</p>
                         <div
-                            style="background: #f8fafc; padding: 1.5rem; border-left: 4px solid var(--color-accent); margin-bottom: 1.5rem;">
+                            style="background: var(--color-bg-alt); padding: 1.5rem; border-left: 4px solid var(--color-accent); margin-bottom: 1.5rem;">
                             <p style="font-size: 0.95rem;"><strong>Strategy:</strong> Precision targeting on Google &
                                 Meta Ads with high-converting creative and landing pages.</p>
                         </div>
@@ -131,7 +135,7 @@
                     <div class="card">
                         <h4>Social Media Marketing</h4>
                         <p class="text-xs text-gray-500 mb-2">Build community and brand loyalty.</p>
-                        <ul style="font-size: 0.9rem; color: #64748b; list-style: disc; padding-left: 1rem;">
+                        <ul style="font-size: 0.9rem; color: var(--color-text-light); list-style: disc; padding-left: 1rem;">
                             <li>Content Strategy</li>
                             <li>Community Management</li>
                         </ul>
@@ -139,7 +143,7 @@
                     <div class="card">
                         <h4>Conversion Rate Optimization</h4>
                         <p class="text-xs text-gray-500 mb-2">Turn more visitors into customers.</p>
-                        <ul style="font-size: 0.9rem; color: #64748b; list-style: disc; padding-left: 1rem;">
+                        <ul style="font-size: 0.9rem; color: var(--color-text-light); list-style: disc; padding-left: 1rem;">
                             <li>A/B Testing</li>
                             <li>UX Analysis</li>
                         </ul>
@@ -147,7 +151,7 @@
                     <div class="card">
                         <h4>AI-Driven SEO</h4>
                         <p class="text-xs text-gray-500 mb-2">Scale content without sacrificing quality.</p>
-                        <ul style="font-size: 0.9rem; color: #64748b; list-style: disc; padding-left: 1rem;">
+                        <ul style="font-size: 0.9rem; color: var(--color-text-light); list-style: disc; padding-left: 1rem;">
                             <li>AI Content Systems</li>
                             <li>Automated Insights</li>
                         </ul>
@@ -170,7 +174,7 @@
             <div class="footer-top">
                 <div class="footer-col" style="flex: 2; min-width: 300px;">
                     <a href="/" class="logo" style="color: #fff; display: block; margin-bottom: 1rem;">VSS.</a>
-                    <p style="color: #94a3b8; max-width: 400px;">A premium digital growth partner for ambitious brands.
+                    <p style="color: var(--color-text-light); max-width: 400px;">A premium digital growth partner for ambitious brands.
                         We focus on what matters: Revenue, ROI, and Results.</p>
                 </div>
                 <div class="footer-col" style="flex: 1;">

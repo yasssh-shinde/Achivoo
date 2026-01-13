@@ -23,7 +23,11 @@
                     <li><a href="/blog.html">Blog</a></li>
                 </ul>
             </nav>
-            <div class="header-actions" style="display: flex; gap: 1rem; align-items: center;">
+            <div class='header-actions' style='display: flex; gap: 1rem; align-items: center;'>
+                <button class="theme-toggle" aria-label="Toggle Theme">
+                    <span class="sun-icon" style="display: none;"></span>
+                    <span class="moon-icon"></span>
+                </button>
                 <a href="/contact.html" class="btn btn-primary header-cta"
                     style="padding: 0.75rem 1.5rem; font-size: 0.9rem;">Get
                     a Growth Audit</a>
@@ -33,7 +37,7 @@
     </header>
 
     <div id="mobile-menu"
-        style="position: fixed; top: 80px; left: 0; width: 100%; background: #fff; padding: 2rem; display: none; border-bottom: 1px solid #eee; z-index: 999;">
+        style="position: fixed; top: 80px; left: 0; width: 100%; background: var(--color-bg); padding: 2rem; display: none; border-bottom: 1px solid var(--color-border); z-index: 999;">
         <ul style="display: flex; flex-direction: column; gap: 1.5rem;">
             <li><a href="/services.html">Services</a></li>
             <li><a href="/case-studies.html">Case Studies</a></li>
@@ -64,7 +68,7 @@
                     <div class="job-card">
                         <div>
                             <h3>Senior SEO Strategist</h3>
-                            <p style="color: #64748b; margin-bottom: 0.5rem; max-width: 600px;">Lead high-level strategy
+                            <p style="color: var(--color-text-light); margin-bottom: 0.5rem; max-width: 600px;">Lead high-level strategy
                                 for our enterprise clients. Must have experience with technical audits and content
                                 scaling.</p>
                             <div class="job-tags">
@@ -81,7 +85,7 @@
                     <div class="job-card">
                         <div>
                             <h3>Performance Media Buyer (Meta/Google)</h3>
-                            <p style="color: #64748b; margin-bottom: 0.5rem; max-width: 600px;">Manage $100k+ monthly ad
+                            <p style="color: var(--color-text-light); margin-bottom: 0.5rem; max-width: 600px;">Manage $100k+ monthly ad
                                 spend. Optimize for ROAS and scale winning creatives.</p>
                             <div class="job-tags">
                                 <span class="tag">Remote (US/UK)</span>
@@ -97,7 +101,7 @@
                     <div class="job-card">
                         <div>
                             <h3>Content Marketing Manager</h3>
-                            <p style="color: #64748b; margin-bottom: 0.5rem; max-width: 600px;">Oversee our content
+                            <p style="color: var(--color-text-light); margin-bottom: 0.5rem; max-width: 600px;">Oversee our content
                                 production engine. Manage writers, editors, and AI workflows.</p>
                             <div class="job-tags">
                                 <span class="tag">Remote</span>
@@ -113,23 +117,23 @@
             </div>
         </section>
 
-        <section class="section" style="background: #f8fafc;">
+        <section class="section" style="background: var(--color-bg-alt);">
             <div class="container text-center">
                 <h2>Why VSS?</h2>
                 <div class="card-grid" style="margin-top: 3rem; text-align: left;">
                     <div class="card" style="border: none;">
                         <h4>Remote Freedom</h4>
-                        <p style="font-size: 0.9rem; color: #64748b;">Work from anywhere. We care about output, not
+                        <p style="font-size: 0.9rem; color: var(--color-text-light);">Work from anywhere. We care about output, not
                             hours in a chair.</p>
                     </div>
                     <div class="card" style="border: none;">
                         <h4>Profit Sharing</h4>
-                        <p style="font-size: 0.9rem; color: #64748b;">When the agency wins, you win. Transparent bonus
+                        <p style="font-size: 0.9rem; color: var(--color-text-light);">When the agency wins, you win. Transparent bonus
                             structures.</p>
                     </div>
                     <div class="card" style="border: none;">
                         <h4>Continuous Learning</h4>
-                        <p style="font-size: 0.9rem; color: #64748b;">$2,000 annual stipend for courses, books, and
+                        <p style="font-size: 0.9rem; color: var(--color-text-light);">$2,000 annual stipend for courses, books, and
                             conferences.</p>
                     </div>
                 </div>
@@ -142,7 +146,7 @@
             <div class="footer-top">
                 <div class="footer-col" style="flex: 2; min-width: 300px;">
                     <a href="/" class="logo" style="color: #fff; display: block; margin-bottom: 1rem;">VSS.</a>
-                    <p style="color: #94a3b8; max-width: 400px;">A premium digital growth partner for ambitious brands.
+                    <p style="color: var(--color-text-light); max-width: 400px;">A premium digital growth partner for ambitious brands.
                         We focus on what matters: Revenue, ROI, and Results.</p>
                 </div>
                 <div class="footer-col" style="flex: 1;">
